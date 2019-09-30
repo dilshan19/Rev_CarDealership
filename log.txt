@@ -1,0 +1,6 @@
+2019-09-29 15:54:57 FATAL root:10 - This is a fatal msg
+2019-09-29 15:54:57 ERROR root:14 - This is an error msg
+2019-09-29 15:54:57 WARN  root:18 - This is an warn msg
+2019-09-29 15:54:57 DEBUG root:22 - This is a debug msg
+2019-09-29 15:54:57 INFO  root:26 - This is an info msg NEW
+2019-09-29 15:54:57 TRACE root:30 - This is a trace msg
