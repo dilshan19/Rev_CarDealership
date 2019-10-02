@@ -3,17 +3,17 @@ package com.revature.pojo;
 public class Offer {
 	private int amount;
 	private int customerId;
-	private int carId;
+	private int vin;
 	private boolean status = false; //false = rejected so far
 	
 	public Offer() {
 		super();
 	}
-	public Offer(int amount, int customerId, int carId) {
+	public Offer(int amount, int customerId, int vin) {
 		super();
 		this.amount = amount;
 		this.customerId = customerId;
-		this.carId = carId;
+		this.vin = vin;
 	}
 	
 	
@@ -29,11 +29,11 @@ public class Offer {
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
-	public int getCarId() {
-		return carId;
+	public int getVin() {
+		return vin;
 	}
-	public void setCarId(int carId) {
-		this.carId = carId;
+	public void setVin(int vin) {
+		this.vin = vin;
 	}
 	public boolean isStatus() {
 		return status;
@@ -46,7 +46,7 @@ public class Offer {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + amount;
-		result = prime * result + carId;
+		result = prime * result + vin;
 		result = prime * result + customerId;
 		result = prime * result + (status ? 1231 : 1237);
 		return result;
@@ -62,7 +62,7 @@ public class Offer {
 		Offer other = (Offer) obj;
 		if (amount != other.amount)
 			return false;
-		if (carId != other.carId)
+		if (vin != other.vin)
 			return false;
 		if (customerId != other.customerId)
 			return false;
@@ -72,7 +72,7 @@ public class Offer {
 	}
 	@Override
 	public String toString() {
-		return "Offer [amount=" + amount + ", customerId=" + customerId + ", carId=" + carId + ", status=" + status
+		return "Offer [amount=" + amount + ", customerId=" + customerId + ", vin=" + vin + ", status=" + status
 				+ "]";
 	}	
 	

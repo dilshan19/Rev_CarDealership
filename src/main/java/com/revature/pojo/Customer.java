@@ -1,5 +1,7 @@
 package com.revature.pojo;
 
+import static com.revature.util.LoggerUtil.debug;
+import static com.revature.util.LoggerUtil.error;
 import static com.revature.util.LoggerUtil.info;
 
 import java.util.ArrayList;
@@ -59,42 +61,50 @@ public class Customer {
 		info("Ask for Car VIN and Pull some info and make calculations based off info");
 	}
 	//Menu Interface
-	public void customerOptions() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("\t>>Welcome " + this.getUserName());
-		String pin = scanner.nextLine();
-		String samplePin = "1234";
-		if(pin.contains(samplePin)) {	
-			info("Customer Menu executions starts");		
-				System.out.println("\tWelcome to Customer Menu ");
-				System.out.println("\t>>Enter '1' View Cars");
-				System.out.println("\t>>Enter '2' Make An Offer!");
-				System.out.println("\t>>Enter '3' View Owned Cars!");
-				System.out.println("\t>>Enter '4' View Remaining Payments!");
-				System.out.println("\t>>Enter 'Q' To Exit Back to Main Menu");
-	
-				String choice = scanner.nextLine();
-				info("User input was: " + choice);
-				switch(choice) {
-					case "1":   this.viewCars();
-					break;
-					case "2":   this.makeOffer();
-					break;
-					case "3":   this.viewOwnedCars();
-					break;
-					case "4":   this.viewRemainingPayments();
-					break;
-					case "5":   CarDealershipDriver.main(null);
-					break;
-					default: info("\tInvalid Input!");
-					break;
-				}
-				scanner.close();			
+	public void customerOptions() {		
+		debug("Logging in....");		
+		boolean quitToMainMenu = false;
+		do {
+			info("Customer Menu executions starts");
+			info("\tWelcome to Customer Menu "+ this.getUserName());
+			info("\t>>Enter '1' View Cars");
+			info("\t>>Enter '2' Make An Offer!");
+			info("\t>>Enter '3' View Owned Cars!");
+			info("\t>>Enter '4' View Remaining Payments!");
+			info("\t>>Enter 'Q' To Exit Back to Main Menu");
+			Scanner scanner = new Scanner(System.in);
+			String choice = scanner.nextLine();
+			debug("User input was: " + choice);
+			switch (choice) {
+			case "1":
+				this.viewCars();
+				quitToMainMenu = true;
+				break;
+			case "2":
+				this.makeOffer();
+				quitToMainMenu = true;
+				break;
+			case "3":
+				this.viewOwnedCars();
+				quitToMainMenu = true;
+				break;
+			case "4":
+				this.viewRemainingPayments();
+				quitToMainMenu = true;
+				break;
+			case "Q":
+				quitToMainMenu = true;
+				break;
+			case "q":
+				quitToMainMenu = true;
+				break;
+			default:
+				info("\tInvalid Input!");
+				break;
+			}
 
-		}else {
-			info("Incorrect Pin. Please Try Again!");
-			CarDealershipDriver.main(null);
-		}	
+		}while(quitToMainMenu == false);
+	
 	}
 	
 }

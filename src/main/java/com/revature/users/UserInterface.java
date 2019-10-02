@@ -28,8 +28,8 @@ public class UserInterface implements UserOpts{
 	CarDealershipDAOImpl customerDAO = new CarDealershipDAOImpl();
 	
 	Scanner scanner = new Scanner(System.in);
-	private static boolean match(String userName, String PIN) {
-		boolean check = false;
+	private static boolean match(String userName, String PIN) {	//TODO method to verify login from database info
+		boolean check = true;	//CHANGE
 		return check;
 	}
 	public void login() {
@@ -39,20 +39,20 @@ public class UserInterface implements UserOpts{
 		boolean validLogin = false;
 		do {
 			try {
-				System.out.println("\n\t>>Enter Your Username!\n");
-				String userName = scanner.nextLine();				
-				System.out.println("\n\t>>Enter Your PIN!\n");
+				info("\n\t>>Enter Your Username!\n");
+				String userName = scanner.nextLine();
+				customer1.setUserName(userName);
+				info("\n\t>>Enter Your PIN!\n");
 				String PIN = scanner.nextLine();				
 				if(this.match(userName, PIN) ) {
 					x=2;
 					validLogin = true;
 				}else {
-					System.out.println("Wrong Combination.");
-					System.out.println("Press (Y) For Main Menu Or Enter Any Other Key To Retry");
+					info("Wrong Combination.");
+					info("Press (Y) For Main Menu Or Enter Any Other Key To Retry");
 					String returnToMain = scanner.nextLine();
 					if(returnToMain.contains("y") || returnToMain.contains("Y")) {
 						x=2;
-						CarDealershipDriver.main(null);
 						break;
 					}
 				}
@@ -75,20 +75,20 @@ public class UserInterface implements UserOpts{
 			
 			do {
 				try {
-					System.out.println("\n\t>>Enter Your First Name!\n");
+					info("\n\t>>Enter Your First Name!\n");
 					String name = scanner.nextLine();
 					if(Pattern.matches("[a-zA-Z]+", name)) {
-						System.out.println("\n\t>>Enter Your Last Name!\n");
+						info("\n\t>>Enter Your Last Name!\n");
 						String lname = scanner.nextLine();
 						if(Pattern.matches("[a-zA-Z]+", lname)) {
 							while(promptForUsername) {
-								System.out.println("\n\t>>Enter a Username or Press '#' to Start Over!\n");
+								info("\n\t>>Enter a Username or Press '#' to Start Over!\n");
 								String username = scanner.nextLine();
 								if(Pattern.matches("[a-zA-Z0-9]{6,18}", username)) {
 									promptForUsername = false;
-									System.out.println("You've entered: " + username);
+									info("You've entered: " + username);
 									while(promptForPIN) {
-										System.out.println("\n\t>>Enter your 4 Digit Pin or Press Q to Start Over!\n");
+										info("\n\t>>Enter your 4 Digit Pin or Press Q to Start Over!\n");
 										String pin = scanner.nextLine();
 										if(Pattern.matches("^[0-9]{4}$", pin)){	//TODO: change to a loop
 											validRegister = true;
@@ -96,27 +96,27 @@ public class UserInterface implements UserOpts{
 											promptForPIN = false;
 											x = 2;
 										}else if(pin.contains("Q") || pin.contains("q") ) {
-											System.out.println("Starting over");
+											info("Starting over");
 											break;
 										}
 										else{
-											System.out.println("\n\tInvalid Input! Try Again!\n");
+											info("\n\tInvalid Input! Try Again!\n");
 										}
 									}
 								}else if(username.contains("#")){
-									System.out.println("Starting over");
+									info("Starting over");
 									break;
 								}
 								else{
-									System.out.println("Username must have 6-18 Alphanumeric characters");
+									info("Username must have 6-18 Alphanumeric characters");
 								}
 							}
 						}else {
-							System.out.println("\n\tInvalid Last Name!\n");
+							info("\n\tInvalid Last Name!\n");
 						}
 						
 					}else {
-						System.out.println("\n\tInvalid Input!\n");
+						info("\n\tInvalid Input!\n");
 					}					
 				}
 				catch(Exception e) {
@@ -128,5 +128,7 @@ public class UserInterface implements UserOpts{
 				login();
 			}
 		}
+	
+	
 	
 	}

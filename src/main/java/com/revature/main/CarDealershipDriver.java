@@ -19,24 +19,25 @@ public class CarDealershipDriver {
 		UserInterface userInterface = new UserInterface();
 		Employee employee = new Employee();
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("\n\n");
+		info("\n\n");
 
 		try {
-			System.out.println("\t\t\t\t ----------------------------------- ");
-			System.out.println("\t\t\t\t/                                   /");
-			System.out.println("\t\t\t\t/          Welcome To RevCar        /");
-			System.out.println("\t\t\t\t/                                   /");
-			System.out.println("\t\t\t\t -----------------------------------\n\n\n");
-			info("Application executions starts");
+
 			boolean keepPrompting = true;
 
 			while(keepPrompting) {
-				System.out.println("\tCustomr: Enter (C)\tEmployee: Enter (E)\tTerminate Program: (T) ");
+				info("\t\t\t\t /////////////////////////////////// ");
+				info("\t\t\t\t/                                   /");
+				info("\t\t\t\t/          Welcome To RevCar        /");
+				info("\t\t\t\t/                                   /");
+				info("\t\t\t\t ///////////////////////////////////\n\n\n");
+				info("Reaching Main Menu");
+				info("\tCustomer: Enter (C)\tEmployee: Enter (E)\tTerminate Program: (T) ");
 				String choice = scanner.nextLine();
 				info("User input was: " + choice);
 				if(choice.contains("C") || choice.contains("c")) {
-					System.out.println("\t>>Enter 'R' To Register");
-					System.out.println("\t>>Enter 'L' To Login!");
+					info("\t>>Enter 'R' To Register");
+					info("\t>>Enter 'L' To Login!");
 
 					String choiceCust = scanner.nextLine();
 					info("Customer input was: " + choiceCust);
@@ -53,15 +54,17 @@ public class CarDealershipDriver {
 						break;
 						case "t": 	keepPrompting = false;
 						break;
-						default: System.out.println("\tInvalid Input!");
+						default: info("\tInvalid Input!");
 						break;
 				}
 				}
 				else if(choice.contains("E") || choice.contains("e")) {
 	                 employee.employeeMenuOptions();
 				}
-				else {
-					System.out.println("Invalid Input!");
+				else if(choice.contains("T") || choice.contains("t")){
+					break;
+				}
+				else{info("Invalid Input!");
 				}
 			}
 			

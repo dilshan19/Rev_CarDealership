@@ -1,10 +1,12 @@
 package com.revature.pojo;
 
 public class Car {
-	private double price;
-	private int id;
+
 	private String name;
 	private String model;
+	private int year;
+	private double price;
+	private int vin;
 	
 	public Car() {
 		super();
@@ -13,7 +15,7 @@ public class Car {
 	public Car(double price, int id, String name, String model) {
 		super();
 		this.price = price;
-		this.id = id;
+		this.vin = id;
 		this.name = name;
 		this.model = model;
 	}
@@ -25,10 +27,10 @@ public class Car {
 		this.price = price;
 	}
 	public int getId() {
-		return id;
+		return vin;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.vin = id;
 	}
 	public String getName() {
 		return name;
@@ -42,17 +44,33 @@ public class Car {
 	public void setModel(String model) {
 		this.model = model;
 	}
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getVin() {
+		return vin;
+	}
+
+	public void setVin(int vin) {
+		this.vin = vin;
+	}
 	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + vin;
+		result = prime * result + year;
 		return result;
 	}
 	@Override
@@ -64,8 +82,6 @@ public class Car {
 		if (getClass() != obj.getClass())
 			return false;
 		Car other = (Car) obj;
-		if (id != other.id)
-			return false;
 		if (model == null) {
 			if (other.model != null)
 				return false;
@@ -78,11 +94,16 @@ public class Car {
 			return false;
 		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
 			return false;
+		if (vin != other.vin)
+			return false;
+		if (year != other.year)
+			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
-		return "Car [price=" + price + ", id=" + id + ", name=" + name + ", model=" + model + "]";
+		return "Car [name=" + name + ", model=" + model + ", year=" + year + ", price=" + price + ", vin=" + vin + "]";
 	}
 	
 
