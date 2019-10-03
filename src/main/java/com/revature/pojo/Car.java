@@ -6,31 +6,33 @@ public class Car {
 	private String model;
 	private int year;
 	private double price;
-	private int vin;
+	private String vin;
 	
 	public Car() {
 		super();
 	}
 	
-	public Car(double price, int id, String name, String model) {
+	public Car(String name, String model, int year, double price, String vin) {
 		super();
-		this.price = price;
-		this.vin = id;
 		this.name = name;
 		this.model = model;
+		this.year = year;
+		this.price = price;
+		this.vin = vin;
 	}
 	
+	public String getVin() {
+		return vin;
+	}
+	public void setVin(String vin) {
+		this.vin = vin;
+	}
+
 	public double getPrice() {
 		return price;
 	}
 	public void setPrice(double price) {
 		this.price = price;
-	}
-	public int getId() {
-		return vin;
-	}
-	public void setId(int id) {
-		this.vin = id;
 	}
 	public String getName() {
 		return name;
@@ -52,14 +54,8 @@ public class Car {
 		this.year = year;
 	}
 
-	public int getVin() {
-		return vin;
-	}
-
-	public void setVin(int vin) {
-		this.vin = vin;
-	}
 	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -69,10 +65,11 @@ public class Car {
 		long temp;
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + vin;
+		result = prime * result + ((vin == null) ? 0 : vin.hashCode());
 		result = prime * result + year;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -94,7 +91,10 @@ public class Car {
 			return false;
 		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
 			return false;
-		if (vin != other.vin)
+		if (vin == null) {
+			if (other.vin != null)
+				return false;
+		} else if (!vin.equals(other.vin))
 			return false;
 		if (year != other.year)
 			return false;

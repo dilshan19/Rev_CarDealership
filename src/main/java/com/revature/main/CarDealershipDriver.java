@@ -40,7 +40,7 @@ public class CarDealershipDriver {
 					info("\t>>Enter 'L' To Login!");
 
 					String choiceCust = scanner.nextLine();
-					info("Customer input was: " + choiceCust);
+					debug("Customer input was: " + choiceCust);
 					switch(choiceCust) {
 						case "R": 	userInterface.register();
 						break;

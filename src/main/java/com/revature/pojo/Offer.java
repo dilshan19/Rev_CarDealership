@@ -2,37 +2,37 @@ package com.revature.pojo;
 
 public class Offer {
 	private int amount;
-	private int customerId;
-	private int vin;
+	private String customerId;
+	private String vin;
 	private boolean status = false; //false = rejected so far
 	
 	public Offer() {
 		super();
 	}
-	public Offer(int amount, int customerId, int vin) {
+	public Offer(int amount, String customerId, String vin, boolean status) {
 		super();
 		this.amount = amount;
 		this.customerId = customerId;
 		this.vin = vin;
+		this.status = status;
 	}
-	
-	
+
 	public int getAmount() {
 		return amount;
 	}
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-	public int getCustomerId() {
+	public String getCustomerId() {
 		return customerId;
 	}
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
-	public int getVin() {
+	public String getVin() {
 		return vin;
 	}
-	public void setVin(int vin) {
+	public void setVin(String vin) {
 		this.vin = vin;
 	}
 	public boolean isStatus() {
@@ -46,9 +46,9 @@ public class Offer {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + amount;
-		result = prime * result + vin;
-		result = prime * result + customerId;
+		result = prime * result + ((customerId == null) ? 0 : customerId.hashCode());
 		result = prime * result + (status ? 1231 : 1237);
+		result = prime * result + ((vin == null) ? 0 : vin.hashCode());
 		return result;
 	}
 	@Override
@@ -62,18 +62,23 @@ public class Offer {
 		Offer other = (Offer) obj;
 		if (amount != other.amount)
 			return false;
-		if (vin != other.vin)
-			return false;
-		if (customerId != other.customerId)
+		if (customerId == null) {
+			if (other.customerId != null)
+				return false;
+		} else if (!customerId.equals(other.customerId))
 			return false;
 		if (status != other.status)
+			return false;
+		if (vin == null) {
+			if (other.vin != null)
+				return false;
+		} else if (!vin.equals(other.vin))
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Offer [amount=" + amount + ", customerId=" + customerId + ", vin=" + vin + ", status=" + status
-				+ "]";
+		return "Offer [amount=" + amount + ", customerId=" + customerId + ", vin=" + vin + ", status=" + status + "]";
 	}	
 	
 }

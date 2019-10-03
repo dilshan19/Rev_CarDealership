@@ -1,6 +1,7 @@
 package com.revature.users;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.revature.pojo.Employee;
@@ -28,41 +29,55 @@ public class UserInterface implements UserOpts{
 	CarDealershipDAOImpl customerDAO = new CarDealershipDAOImpl();
 	
 	Scanner scanner = new Scanner(System.in);
-	private static boolean match(String userName, String PIN) {	//TODO method to verify login from database info
+	private boolean match(String userName, String PIN) {	//TODO method to verify login from database info
 		boolean check = true;	//CHANGE
+		check = customerDAO.checkForLogin(userName, PIN);
 		return check;
 	}
 	public void login() {
-		// TODO Auto-generated method stub
-		info("Logging in....");		
-		int x = 1;
+		// TODO Turn this into a while
+		info("Please Log in");		
+		boolean stay = true;
 		boolean validLogin = false;
+		String userName = null;
+		String PIN = null;
 		do {
 			try {
 				info("\n\t>>Enter Your Username!\n");
-				String userName = scanner.nextLine();
+				userName = scanner.nextLine();
 				customer1.setUserName(userName);
 				info("\n\t>>Enter Your PIN!\n");
-				String PIN = scanner.nextLine();				
+				PIN = scanner.nextLine();
+				customer1.setPin(PIN);
 				if(this.match(userName, PIN) ) {
-					x=2;
+					stay = false;
 					validLogin = true;
 				}else {
 					info("Wrong Combination.");
 					info("Press (Y) For Main Menu Or Enter Any Other Key To Retry");
 					String returnToMain = scanner.nextLine();
 					if(returnToMain.contains("y") || returnToMain.contains("Y")) {
-						x=2;
+						stay = false;
 						break;
 					}
 				}
 			}
-			catch(Exception e) {
+			catch(InputMismatchException e) {
+				info("Try Again. Please enter valid the valid data type\n");
 				error(e);
-				x = 2;
+			}catch(NumberFormatException e){
+				error(e);
+				info("Try Again. Please enter valid the valid data type\n");
 			}
-		}while(x == 1);
+			catch(Exception e) {
+				debug("Different Error");
+				error(e);
+				stay = false;
+			}
+		}while(stay == true);
 		if(validLogin) {
+			customer1.setPin(PIN);
+			customer1.setUserName(userName);
 			customer1.customerOptions();
 		}		
 	}
@@ -125,6 +140,7 @@ public class UserInterface implements UserOpts{
 				}
 			}while(x == 1);
 			if(validRegister) {
+				info("Account created.");
 				login();
 			}
 		}

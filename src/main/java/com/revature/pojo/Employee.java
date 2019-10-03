@@ -11,127 +11,195 @@ import com.revature.main.CarDealershipDriver;
 import static com.revature.util.LoggerUtil.*;
 
 public class Employee {
-	
-	CarDealershipDAOImpl cardealerdao = new CarDealershipDAOImpl();
-	Car car = new Car();
-	Scanner scanner = new Scanner(System.in);
-	//Scanner scannerint = new Scanner(System.in);
-	//Scanner scannerd = new Scanner(System.in);
+	private String userName;
+	private String PIN;
+	private CarDealershipDAOImpl cardealerdao = new CarDealershipDAOImpl();
+	private Car car = new Car();
+	private Scanner scanner = new Scanner(System.in);
 
-
+	//TODO: ask for Car info and return an int, code for DB's response
 	public void addCar() {
 		boolean stay = true;
+		Car car = new Car();
+		int result = 0;
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
-				info("\tAdd A Car To The Lot");
+				info("\tYou have chose to add a car.");
 				info("\tEnter Car Make");
 				String make = scanner.nextLine();
 				car.setName(make);
 				info("\tEnter Car Model");
 				String model = scanner.nextLine();
 				car.setModel(model);
+				info("\tEnter model year");
+				String year = scanner.nextLine();
+				car.setYear(Integer.parseInt(year));
 				info("\tEnter Car VIN");
-				int vin = scanner.nextInt();
-				car.setId(vin);
+				String vin = scanner.nextLine();
+				car.setVin(vin);
 				info("\tEnter Car Price");
 				double price = scanner.nextDouble();
 				car.setPrice(price);
-				cardealerdao.addCar(make, model, vin, price);
-				if(cardealerdao.addCar(make, model, vin, price) > 0) {
-					stay = false;;
-					info("\tThe Car Was Successfully Added:");
-					info(car.toString());
-					debug("Car added");
+				result = cardealerdao.addCar(car);
+				if(result == 1) {
 					stay = false;
-				}else {	//consider case where car with the same VIN is stored
+					info(car.toString());
+					info("\tThe car was successfully added to the Lot:");
+					stay = false;
+				}else if(result == 0){	//consider case where car with the same VIN is stored
 					info("This information is invalid");
+				}else if(result == 2) {
+					info("This VIN has already been registered");
 				}
-				 	
 			}catch(InputMismatchException e) {
 				info("Try Again. Please enter valid the valid data type");
-				stay = false;
 				error(e);
-			}catch(Exception e) {
+			}catch(NumberFormatException e) {
+				info("Try Again. Please enter valid the valid data type");
+				error(e);
+			}			
+			catch(Exception e) {
 				debug("Different Error");
-				stay = false;
 				error(e);
 			}
 		}while(stay);
 	}
+	
+	//TODO: ask for VIN and query DB using CarDealershipDAO
 	public int reviewOffer() {
-		info("Pulling data -> truning into Offer obj -> make a decision here");
-		//TODO: ask for VIN and query DB using CarDealershipDAO
+		debug("Pulling data -> truning into Offer obj -> make a decision here");
 		boolean stay = true;
 		Offer offer = new Offer();
 		int result = 0;
+		boolean confirmOffer = true;
+
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
-				info("\tEnter Car VIN");
-				int vin = scanner.nextInt();
-				offer = cardealerdao.getOffer(vin);
-				if(offer != null) {
-					boolean confirmOffer = true;
-					stay = false;
-					while(confirmOffer) {
-						info("\tCustomer ID: " + offer.getCustomerId() + " has offered: " + offer.getAmount() );
+				info("\tEnter Car VIN or Quit (Q) to Employee Menu");
+				String vin = scanner.nextLine();
+				debug("vin: " + vin);
+				offer = cardealerdao.getOffer( vin );
+				if(vin.contains("Q")) {
+					debug("Q detected");
+				}
+
+				if (offer != null && ( offer.getVin() == vin) ) {
+					while (confirmOffer) {
+						info("\tCustomer ID: " + offer.getCustomerId() + " has offered: " + offer.getAmount());
 						info("\tAccept (Y) or Reject (N)?");
 						String choice = scanner.nextLine();
 						debug("User input was: " + choice);
-						switch(choice) {//TODO: add methods to dealershipDAO to update DB with below results
-							case "y":   info("Offer Accepted");stay = false;confirmOffer=false;result = 1;
+						switch (choice) {// TODO: add methods to dealershipDAO to update DB with below results
+						case "y":
+							info("Offer Accepted");
+							stay = false;confirmOffer = false;offer.setStatus(true);
+							result = 1;
 							break;
-							case "Y":   info("Offer Accepted");stay = false;confirmOffer=false;result = 1;
+						case "Y":
+							info("Offer Accepted");
+							stay = false;confirmOffer = false;offer.setStatus(true);
+							result = 1;
 							break;
-							case "n":   info("Offer Rejected");stay = false;confirmOffer=false;result = 2;
+						case "n":
+							info("Offer Rejected");
+							stay = false;confirmOffer = false;offer.setStatus(false);
+							result = 2;
 							break;
-							case "N":   info("Offer Rejected");stay = false;confirmOffer=false;result = 2;
+						case "N":
+							info("Offer Rejected");
+							confirmOffer = false;confirmOffer = false;offer.setStatus(false);
+							result = 2;
 							break;
-							default:	info("Please Enter A Valid Option");
+						default:
+							info("Please Enter A Valid Option");
 							break;
 						}
 					}
-				}else {	//consider case where car with the same VIN is stored
-					info("This VIN is not in our system");
+				} else if(vin == "Q" || vin == "q") {
 					stay = false;
+				}				
+				else { // consider case where car with the same VIN is stored
+					info("VIN not in our system, try again.");
 				}
-				 	
+
 			}catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type");
-				stay = false;
+				info("Try Again. Please enter valid the valid data type\n");
 				error(e);
-			}catch(Exception e) {
+			}catch(NumberFormatException e){
+				error(e);
+				info("Try Again. Please enter valid the valid data type\n");
+			}
+			catch(Exception e) {
 				debug("Different Error");
-				stay = false;
 				error(e);
+				stay = false;
 			}
 		}while(stay);
 		
 		return result;
 	}
 	
-	public boolean removeCar() {
-		info("\tEnter 'R' To Remove A Car From The Car Lot!");
-		String removeCar = scanner.nextLine();
-		if(removeCar.contains("R")) {
-			info("\tEnter The Car Id!");
-			String carId = scanner.nextLine();
-			if(Pattern.matches("[0-9]+", carId)) {
-				int id = Integer.valueOf(carId);
-				cardealerdao.removeCar(id);
-				if(cardealerdao.removeCar(id) > 0) {
-					info("The Car Was Successfully Deleted");
-                    debug(" ");
-                }else {
-                    debug("\tCar Not Found!\n");
-                }
-            }else {
-                debug("\tInvalid Input!");
-            }
-            
-        }else {
-            debug("\tInvalid Input!");
-        }
-        return false;
+	//TODO: ask for VIN and use int to return DB's response
+	public int removeCar_helper() {
+		int result = 0;
+		info("\tEnter The Car Id!");
+		String carId = scanner.nextLine();
+		if(cardealerdao.checkIfCarInLot(carId)) {
+			result = cardealerdao.removeCar(carId);
+		}
+		return result;
+	}
+	public int removeCar() {
+		boolean stay = true;		
+		int result = 0;
+		do {
+			try {
+				info("\tEnter (R) to remove a car, or (Q) to return to Employee Menu");
+				String removeCar = scanner.nextLine();
+				switch(removeCar) {
+				case "R":
+					result = removeCar_helper();stay = false;
+					break;			
+				case "r":
+					result = removeCar_helper();stay = false;
+					break;
+				case "Q":
+					stay = false;
+					break;
+				case "q":
+					stay = false;
+					break;
+				default:
+					info("\tInvalid Input!");
+				}	
+			}catch(InputMismatchException e) {
+				info("Try Again. Please enter valid the valid data type\n");
+				stay = false;
+				error(e);
+			}catch(NumberFormatException e){
+				error(e);
+				info("Try Again. Please enter valid the valid data type\n");
+				stay = false;
+			}
+			catch(Exception e) {
+				debug("Different Error");
+				error(e);
+				stay = false;
+			}			
+		}while(stay);
+		//TODO: switch case for result
+		switch(result) {
+		case 0:
+			info("\tVIN not found");
+			break;
+		case 1:
+			info("\tCar successfully removed");
+			break;
+		case 2:
+			info("\tDatabase error");
+			break;
+		}
+        return result;
 	}
 	
 	public void showCars() {
@@ -161,37 +229,53 @@ public class Employee {
 	*/
 	public void employeeMenuOptions() {
 		boolean stay = true;
+		boolean hasNotLoggedIn = true;
+		final String samplePin = "1234";
+
 		do {
-			info("\t>>Enter Enter Your 4 Digit PIN!");
-			String pin = scanner.nextLine();
-			String samplePin = "1234";
-			if(pin.contains(samplePin)) {	
-				info("Employee Menu executions starts");		
-					info("\tWelcome to Employee Menu ");
-					info("\t>>Enter '1' Add A Car to The Lot!");
-					info("\t>>Enter '2' Accept or reject an offer!");
-					info("\t>>Enter '3' View Payments!");
-					info("\t>>Enter '4' Remove A Car From The Lot!");
-					info("\t>>Enter 'Q' To Exit Back to Main Menu");
-		
-					String choice = scanner.nextLine();
-					debug("User input was: " + choice);
-					switch(choice) {
-						case "1":   this.addCar();stay = false;
-						break;
-						case "2":   this.addCar();stay = false;
-						break;
-						case "3":   this.reviewOffer();stay = false;
-						break;
-						case "4":   this.reviewOffer();stay = false;
-						break;
-						default: info("\tInvalid Input!");
-						break;
-					}
-			}else {
-				info("Incorrect Pin. Please Try Again!");
+			if(hasNotLoggedIn) {
+				info("\t>>Enter Enter Your 4 Digit PIN!");
+				String pin = scanner.nextLine();
+				if(pin.contains(samplePin)) {
+					hasNotLoggedIn = false;
+				}
+				else {
+					info("Incorrect Pin. Please Try Again!");
+					stay = false;
+				}	
+			}
+				
+			info("\tWelcome to the Employee Menu");
+			info("\t>>Enter '1' Add A Car to The Lot!");
+			info("\t>>Enter '2' Accept or reject an offer!");
+			info("\t>>Enter '3' View Payments!");
+			info("\t>>Enter '4' Remove A Car From The Lot!");
+			info("\t>>Enter 'Q' To Exit Back to Main Menu");
+
+			String choice = scanner.nextLine();
+			debug("User input was: " + choice);
+			switch (choice) {
+			case "1":
+				this.addCar();
+				break;
+			case "2":
+				this.reviewOffer();
+				break;
+			case "3":
+				this.viewPayments();
+				break;
+			case "4":
+				this.removeCar();
+				break;
+			case "q":
 				stay = false;
-			}	
+			case "Q":
+				stay = false;
+			default:
+				info("\tInvalid Input!");
+				break;
+			}
+
 		}while(stay);
 	}
 	
