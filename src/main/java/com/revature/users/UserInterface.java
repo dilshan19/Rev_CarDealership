@@ -81,15 +81,27 @@ public class UserInterface implements UserOpts{
 			customer1.customerOptions();
 		}		
 	}
+	
+	private boolean exitRegister(String line) {
+		boolean check = false;
+		
+		
+		return check;
+	}
 
 	public void register() throws IOException{			
-			int x = 1;
+			boolean stay = true;
 			boolean promptForUsername = true;
 			boolean promptForPIN = true;
 			boolean validRegister = false;
 			
 			do {
 				try {
+					info("Enter '#' to exit now, or press any other key to continue registering");
+					String cont = scanner.nextLine(); 
+					if(cont.contains("#")) {
+						stay = false;continue;
+					}
 					info("\n\t>>Enter Your First Name!\n");
 					String name = scanner.nextLine();
 					if(Pattern.matches("[a-zA-Z]+", name)) {
@@ -109,7 +121,7 @@ public class UserInterface implements UserOpts{
 											validRegister = true;
 											debug("Pin: " + pin);
 											promptForPIN = false;
-											x = 2;
+											stay = false;
 										}else if(pin.contains("Q") || pin.contains("q") ) {
 											info("Starting over");
 											break;
@@ -135,10 +147,11 @@ public class UserInterface implements UserOpts{
 					}					
 				}
 				catch(Exception e) {
+					debug("Exception caught");
 					error(e);
-					x = 2;
+					stay = true;
 				}
-			}while(x == 1);
+			}while(stay);
 			if(validRegister) {
 				info("Account created.");
 				login();

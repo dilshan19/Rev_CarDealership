@@ -1,6 +1,244 @@
-2019-09-29 15:54:57 FATAL root:10 - This is a fatal msg
-2019-09-29 15:54:57 ERROR root:14 - This is an error msg
-2019-09-29 15:54:57 WARN  root:18 - This is an warn msg
-2019-09-29 15:54:57 DEBUG root:22 - This is a debug msg
-2019-09-29 15:54:57 INFO  root:26 - This is an info msg NEW
-2019-09-29 15:54:57 TRACE root:30 - This is a trace msg
+2019-10-03 13:30:09 INFO  root:29 - 
+
+2019-10-03 13:30:09 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:30:09 INFO  root:29 - 				/                                   /
+2019-10-03 13:30:09 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:30:09 INFO  root:29 - 				/                                   /
+2019-10-03 13:30:09 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:30:09 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:30:24 INFO  root:29 - User input was: e
+2019-10-03 13:30:24 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-03 13:30:31 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-03 13:30:33 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 13:30:33 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 13:30:33 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 13:30:33 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 13:30:33 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 13:30:33 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:30:35 DEBUG root:25 - User input was: 1
+2019-10-03 13:30:35 INFO  root:29 - 	You have chose to add a car.
+2019-10-03 13:30:35 INFO  root:29 - 	Enter Car Make
+2019-10-03 13:30:40 INFO  root:29 - 	Enter Car Model
+2019-10-03 13:30:41 INFO  root:29 - 	Enter model year
+2019-10-03 13:30:44 INFO  root:29 - 	Enter Car VIN
+2019-10-03 13:30:51 INFO  root:29 - 	Enter Car Price
+2019-10-03 13:30:55 INFO  root:29 - Car Added to DB
+2019-10-03 13:30:55 INFO  root:29 - Car [name=nissan, model=sentra, year=2010, price=10000.0, vin=17digits]
+2019-10-03 13:30:55 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-03 13:30:55 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:30:55 DEBUG root:25 - User input was: 
+2019-10-03 13:30:55 INFO  root:29 - 	Invalid Input!
+2019-10-03 13:30:55 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 13:30:55 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:47:41 INFO  root:29 - 
+
+2019-10-03 13:47:41 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:47:41 INFO  root:29 - 				/                                   /
+2019-10-03 13:47:41 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:47:41 INFO  root:29 - 				/                                   /
+2019-10-03 13:47:41 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:47:41 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:48:44 INFO  root:29 - 
+
+2019-10-03 13:48:44 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:48:44 INFO  root:29 - 				/                                   /
+2019-10-03 13:48:44 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:48:44 INFO  root:29 - 				/                                   /
+2019-10-03 13:48:44 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:48:44 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:49:11 INFO  root:29 - 
+
+2019-10-03 13:49:11 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:49:11 INFO  root:29 - 				/                                   /
+2019-10-03 13:49:11 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:49:11 INFO  root:29 - 				/                                   /
+2019-10-03 13:49:11 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:49:11 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:49:12 INFO  root:29 - User input was: c
+2019-10-03 13:49:12 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-03 13:49:12 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-03 13:49:48 INFO  root:29 - 
+
+2019-10-03 13:49:48 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:49:48 INFO  root:29 - 				/                                   /
+2019-10-03 13:49:48 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:49:48 INFO  root:29 - 				/                                   /
+2019-10-03 13:49:48 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:49:48 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:49:50 INFO  root:29 - User input was: c
+2019-10-03 13:49:50 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-03 13:49:50 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-03 13:54:15 INFO  root:29 - 
+
+2019-10-03 13:54:15 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:54:15 INFO  root:29 - 				/                                   /
+2019-10-03 13:54:15 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:54:15 INFO  root:29 - 				/                                   /
+2019-10-03 13:54:15 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:54:15 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:54:20 INFO  root:29 - User input was: C
+2019-10-03 13:54:20 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-03 13:54:20 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-03 13:54:25 DEBUG root:25 - Customer input was: R
+2019-10-03 13:54:25 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-03 13:54:35 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:54:35 INFO  root:29 - 				/                                   /
+2019-10-03 13:54:35 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:54:35 INFO  root:29 - 				/                                   /
+2019-10-03 13:54:35 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:54:35 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:54:38 INFO  root:29 - User input was: C
+2019-10-03 13:54:38 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-03 13:54:38 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-03 13:54:40 DEBUG root:25 - Customer input was: L
+2019-10-03 13:54:40 INFO  root:29 - Please Log in
+2019-10-03 13:54:40 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-03 13:54:44 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-03 13:54:49 DEBUG root:25 - Logging in....
+2019-10-03 13:54:49 INFO  root:29 - 	Welcome to Customer Menu username
+2019-10-03 13:54:49 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-03 13:54:49 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-03 13:54:49 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-03 13:54:49 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-03 13:54:49 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:54:56 DEBUG root:25 - User input was: 1
+2019-10-03 13:54:56 INFO  root:29 - Pulling all cars (result set -> to arrayList of cars
+2019-10-03 13:54:56 INFO  root:29 - No cars to show
+2019-10-03 13:54:56 INFO  root:29 - 	Welcome to Customer Menu username
+2019-10-03 13:54:56 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-03 13:54:56 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-03 13:54:56 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-03 13:54:56 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-03 13:54:56 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:55:33 DEBUG root:25 - User input was: 2
+2019-10-03 13:55:33 DEBUG root:25 - Making an offerMade..
+2019-10-03 13:55:33 INFO  root:29 - What is the Car VIN? Press '#' to return to the Customer Menu
+2019-10-03 13:55:42 INFO  root:29 - Car [name=Ford, model=mustang, year=2019, price=36000.0, vin=17chars]
+2019-10-03 13:55:42 INFO  root:29 - How much are you offering for the 2019 Ford mustang?
+2019-10-03 13:55:56 DEBUG root:25 - Updating offers table in DB
+2019-10-03 13:55:56 INFO  root:29 - We have saved your offer
+2019-10-03 13:55:56 INFO  root:29 - 	Welcome to Customer Menu username
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:55:56 DEBUG root:25 - User input was: 
+2019-10-03 13:55:56 INFO  root:29 - 	Invalid Input!
+2019-10-03 13:55:56 INFO  root:29 - 	Welcome to Customer Menu username
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-03 13:55:56 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:56:21 DEBUG root:25 - User input was: 3
+2019-10-03 13:56:21 INFO  root:29 - Pulling owner's cars (result set -> to arrayList of cars
+2019-10-03 13:56:21 INFO  root:29 - No cars owned
+2019-10-03 13:56:21 INFO  root:29 - 	Welcome to Customer Menu username
+2019-10-03 13:56:21 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-03 13:56:21 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-03 13:56:21 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-03 13:56:21 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-03 13:56:21 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:56:35 DEBUG root:25 - User input was: q
+2019-10-03 13:56:35 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:56:35 INFO  root:29 - 				/                                   /
+2019-10-03 13:56:35 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:56:35 INFO  root:29 - 				/                                   /
+2019-10-03 13:56:35 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:56:35 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:56:37 INFO  root:29 - User input was: E
+2019-10-03 13:56:37 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-03 13:56:41 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-03 13:56:43 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 13:56:43 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 13:56:43 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 13:56:43 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 13:56:43 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 13:56:43 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:56:46 DEBUG root:25 - User input was: 1
+2019-10-03 13:56:46 INFO  root:29 - 	You have chose to add a car.
+2019-10-03 13:56:46 INFO  root:29 - 	Enter Car Make
+2019-10-03 13:56:51 INFO  root:29 - 	Enter Car Model
+2019-10-03 13:56:54 INFO  root:29 - 	Enter model year
+2019-10-03 13:56:57 INFO  root:29 - 	Enter Car VIN
+2019-10-03 13:57:02 INFO  root:29 - 	Enter Car Price
+2019-10-03 13:57:04 INFO  root:29 - Car Added to DB
+2019-10-03 13:57:04 INFO  root:29 - Car [name=Nissan, model=Sentra, year=20112, price=10000.0, vin=17char]
+2019-10-03 13:57:04 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-03 13:57:04 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:57:04 DEBUG root:25 - User input was: 
+2019-10-03 13:57:04 INFO  root:29 - 	Invalid Input!
+2019-10-03 13:57:04 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 13:57:04 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 13:57:31 DEBUG root:25 - User input was: q
+2019-10-03 13:57:31 INFO  root:29 - 	Invalid Input!
+2019-10-03 13:57:31 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 13:57:31 INFO  root:29 - 				/                                   /
+2019-10-03 13:57:31 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 13:57:31 INFO  root:29 - 				/                                   /
+2019-10-03 13:57:31 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 13:57:31 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 13:57:35 INFO  root:29 - User input was: T
+2019-10-03 13:57:35 DEBUG root:25 - Exiting menu now
+2019-10-03 14:21:02 INFO  root:29 - 
+
+2019-10-03 14:21:02 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-03 14:21:02 INFO  root:29 - 				/                                   /
+2019-10-03 14:21:02 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-03 14:21:02 INFO  root:29 - 				/                                   /
+2019-10-03 14:21:02 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-03 14:21:02 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-03 14:21:04 INFO  root:29 - User input was: e
+2019-10-03 14:21:04 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-03 14:21:05 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-03 14:21:06 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 14:21:06 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 14:21:06 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 14:21:06 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 14:21:06 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 14:21:06 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-03 14:21:08 DEBUG root:25 - User input was: 1
+2019-10-03 14:21:08 INFO  root:29 - 	You have chose to add a car.
+2019-10-03 14:21:08 INFO  root:29 - 	Enter Car Make
+2019-10-03 14:21:09 INFO  root:29 - 	Enter Car Model
+2019-10-03 14:21:10 INFO  root:29 - 	Enter model year
+2019-10-03 14:21:11 INFO  root:29 - Try Again. Please enter valid the valid data type
+2019-10-03 14:21:11 ERROR root:17 - java.lang.NumberFormatException: For input string: "l"
+2019-10-03 14:21:11 INFO  root:29 - 	You have chose to add a car.
+2019-10-03 14:21:11 INFO  root:29 - 	Enter Car Make
+2019-10-03 14:21:16 INFO  root:29 - 	Enter Car Model
+2019-10-03 14:21:17 INFO  root:29 - 	Enter model year
+2019-10-03 14:21:19 INFO  root:29 - 	Enter Car VIN
+2019-10-03 14:21:22 INFO  root:29 - 	Enter Car Price
+2019-10-03 14:21:25 INFO  root:29 - Car Added to DB
+2019-10-03 14:21:25 INFO  root:29 - Car [name=k, model=l, year=0, price=909.0, vin=ijij9]
+2019-10-03 14:21:25 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-03 14:21:25 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-03 14:21:25 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-03 14:21:25 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-03 14:21:25 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-03 14:21:25 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-03 14:21:25 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu

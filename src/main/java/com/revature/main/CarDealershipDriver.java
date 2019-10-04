@@ -19,7 +19,7 @@ public class CarDealershipDriver {
 		UserInterface userInterface = new UserInterface();
 		Employee employee = new Employee();
 		Scanner scanner = new Scanner(System.in);
-		info("\n\n");
+		info("\n");
 
 		try {
 
@@ -30,8 +30,7 @@ public class CarDealershipDriver {
 				info("\t\t\t\t/                                   /");
 				info("\t\t\t\t/          Welcome To RevCar        /");
 				info("\t\t\t\t/                                   /");
-				info("\t\t\t\t ///////////////////////////////////\n\n\n");
-				info("Reaching Main Menu");
+				info("\t\t\t\t ///////////////////////////////////");
 				info("\tCustomer: Enter (C)\tEmployee: Enter (E)\tTerminate Program: (T) ");
 				String choice = scanner.nextLine();
 				info("User input was: " + choice);

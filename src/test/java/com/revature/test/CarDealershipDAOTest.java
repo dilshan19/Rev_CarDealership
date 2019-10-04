@@ -46,4 +46,5 @@ public class CarDealershipDAOTest {
 	public void testStateReturnForEmployeeOfferReview() {
 		assertEquals(0, employee.reviewOffer() );
 	}
+
 }

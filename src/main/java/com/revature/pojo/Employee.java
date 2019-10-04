@@ -13,7 +13,7 @@ import static com.revature.util.LoggerUtil.*;
 public class Employee {
 	private String userName;
 	private String PIN;
-	private CarDealershipDAOImpl cardealerdao = new CarDealershipDAOImpl();
+	private CarDealershipDAOImpl carDAO = new CarDealershipDAOImpl();
 	private Car car = new Car();
 	private Scanner scanner = new Scanner(System.in);
 
@@ -38,9 +38,9 @@ public class Employee {
 				String vin = scanner.nextLine();
 				car.setVin(vin);
 				info("\tEnter Car Price");
-				double price = scanner.nextDouble();
-				car.setPrice(price);
-				result = cardealerdao.addCar(car);
+				String price = scanner.nextLine();
+				car.setPrice(Double.parseDouble(price));
+				result = carDAO.addCar(car);
 				if(result == 1) {
 					stay = false;
 					info(car.toString());
@@ -75,10 +75,10 @@ public class Employee {
 
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
-				info("\tEnter Car VIN or Quit (Q) to Employee Menu");
+				info("\tEnter Car VIN or Quit (#) to Employee Menu");
 				String vin = scanner.nextLine();
 				debug("vin: " + vin);
-				offer = cardealerdao.getOffer( vin );
+				offer = carDAO.getOffer( vin );
 				if(vin.contains("Q")) {
 					debug("Q detected");
 				}
@@ -115,7 +115,7 @@ public class Employee {
 							break;
 						}
 					}
-				} else if(vin == "Q" || vin == "q") {
+				} else if(vin.contains("#")) {
 					stay = false;
 				}				
 				else { // consider case where car with the same VIN is stored
@@ -143,9 +143,9 @@ public class Employee {
 	public int removeCar_helper() {
 		int result = 0;
 		info("\tEnter The Car Id!");
-		String carId = scanner.nextLine();
-		if(cardealerdao.checkIfCarInLot(carId)) {
-			result = cardealerdao.removeCar(carId);
+		String vin = scanner.nextLine();
+		if(carDAO.checkIfCarInLot(vin)) {
+			result = carDAO.removeCar(vin);
 		}
 		return result;
 	}
@@ -227,6 +227,11 @@ public class Employee {
 		}while(x ==1);
 	}
 	*/
+	private boolean match(String userName, String PIN) {	//TODO method to verify login from database info
+		boolean check = true;	//CHANGE
+		check = carDAO.checkForLogin(userName, PIN);
+		return check;
+	}
 	public void employeeMenuOptions() {
 		boolean stay = true;
 		boolean hasNotLoggedIn = true;
@@ -234,9 +239,11 @@ public class Employee {
 
 		do {
 			if(hasNotLoggedIn) {
+				info("\t>>Enter Enter your Username!");
+				String emp_userName = scanner.nextLine();
 				info("\t>>Enter Enter Your 4 Digit PIN!");
 				String pin = scanner.nextLine();
-				if(pin.contains(samplePin)) {
+				if(match(emp_userName, PIN)) {
 					hasNotLoggedIn = false;
 				}
 				else {
