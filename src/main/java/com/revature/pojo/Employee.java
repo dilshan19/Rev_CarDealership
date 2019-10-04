@@ -40,6 +40,7 @@ public class Employee {
 				info("\tEnter Car Price");
 				String price = scanner.nextLine();
 				car.setPrice(Double.parseDouble(price));
+				car.setRemainingPayment(Double.parseDouble(price));
 				result = carDAO.addCar(car);
 				if(result == 1) {
 					stay = false;

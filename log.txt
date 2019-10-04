@@ -242,3 +242,43 @@
 2019-10-03 14:21:25 INFO  root:29 - 	>>Enter '3' View Payments!
 2019-10-03 14:21:25 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
 2019-10-03 14:21:25 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 00:51:42 INFO  root:29 - 
+
+2019-10-04 00:51:42 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 00:51:42 INFO  root:29 - 				/                                   /
+2019-10-04 00:51:42 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 00:51:42 INFO  root:29 - 				/                                   /
+2019-10-04 00:51:42 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 00:51:42 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 00:52:24 INFO  root:29 - 
+
+2019-10-04 00:52:24 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 00:52:24 INFO  root:29 - 				/                                   /
+2019-10-04 00:52:24 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 00:52:24 INFO  root:29 - 				/                                   /
+2019-10-04 00:52:24 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 00:52:24 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 00:53:52 INFO  root:29 - 
+
+2019-10-04 00:53:52 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 00:53:52 INFO  root:29 - 				/                                   /
+2019-10-04 00:53:52 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 00:53:52 INFO  root:29 - 				/                                   /
+2019-10-04 00:53:52 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 00:53:52 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 00:55:32 INFO  root:29 - 
+
+2019-10-04 00:55:32 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 00:55:32 INFO  root:29 - 				/                                   /
+2019-10-04 00:55:32 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 00:55:32 INFO  root:29 - 				/                                   /
+2019-10-04 00:55:32 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 00:55:32 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 00:57:38 INFO  root:29 - 
+
+2019-10-04 00:57:38 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 00:57:38 INFO  root:29 - 				/                                   /
+2019-10-04 00:57:38 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 00:57:38 INFO  root:29 - 				/                                   /
+2019-10-04 00:57:38 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 00:57:38 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 

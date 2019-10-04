@@ -2,20 +2,51 @@ package com.revature.dao;
 
 import static com.revature.util.LoggerUtil.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
+import com.revature.jdbc.util.ConnectionFactory;
 import com.revature.pojo.Car;
 import com.revature.pojo.Customer;
 import com.revature.pojo.Offer;
 
 public class CarDealershipDAOImpl implements CarDealershipDAO{
+	private Connection conn = ConnectionFactory.getConnection();
 	Offer offer = new Offer();
 	Car car = new Car();
 	@Override
 	public int addCar(Car car) {
 		// TODO Auto-generated method stub
+		int result = 1;
+		try {
+			String sql2 = "insert into cars values("+car.getVin()+","+car.getName()+","+car.getModel()+","
+			+car.getYear()+","+car.getPrice()+","+car.getRemainingPayment()+")";
+			String sql3 = "select * from cars";
+
+			Statement stmt = conn.createStatement();
+
+			stmt.executeUpdate(sql2);
+			debug("Car with VIN: " + car.getVin() + " inserted");
+
+			ResultSet resultSet = stmt.executeQuery(sql3);
+
+			debug("Select query");
+
+			while (resultSet.next()) {
+				info("VIN " + resultSet.getInt(1) + " Make: " + resultSet.getString(2) + " Model: " + resultSet.getString(3));
+				info("Year: " + resultSet.getInt(4) + " Price: " + resultSet.getString(5)  + " Remaining: " + resultSet.getString(6));			
+			}
+			debug("SQL transaction complete");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
 		info("Car Added to DB");
-		return 1;
+		return result;
 	}
 
 	@Override
@@ -35,7 +66,7 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 	}
 
 	@Override
-	public void saveCustomer(String first, String last, String ssn) {
+	public void saveCustomer(Customer c) {
 		// TODO Auto-generated method stub
 		debug("Saving customer info into DB");
 	}
@@ -95,6 +126,12 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 		// TODO Auto-generated method stub
 		Car oneCar = new Car("Ford", "mustang", 2019, 36000, VIN);
 		return oneCar;
+	}
+
+	@Override
+	public boolean updateRemainingPayment(String VIN, double amount) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	

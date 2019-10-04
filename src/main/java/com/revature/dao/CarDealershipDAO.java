@@ -8,7 +8,7 @@ import com.revature.pojo.Offer;
 
 public interface CarDealershipDAO {
 	
-	public void saveCustomer(String first, String last, String ssn);
+	public void saveCustomer(Customer c);
 	public int addCar(Car car);
 	public Offer getOffer(String vin);
 	public int putOffer(Offer offer);
@@ -20,6 +20,7 @@ public interface CarDealershipDAO {
 	public ArrayList<Car> getOwnersCarList(String username);
 	public ArrayList<Car> getEntireCarList(String username);
 	public Car pullIndividualCar(String VIN);
+	public boolean updateRemainingPayment(String VIN, double amount);
 
 	
 }

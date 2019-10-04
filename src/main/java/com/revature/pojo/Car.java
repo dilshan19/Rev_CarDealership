@@ -7,10 +7,11 @@ public class Car {
 	private int year;
 	private double price;
 	private String vin;
+	private double remainingPayment;
 	
 	public Car() {
 		super();
-	}
+	}	
 	
 	public Car(String name, String model, int year, double price, String vin) {
 		super();
@@ -19,8 +20,9 @@ public class Car {
 		this.year = year;
 		this.price = price;
 		this.vin = vin;
+		this.remainingPayment = price;
 	}
-	
+
 	public String getVin() {
 		return vin;
 	}
@@ -53,7 +55,13 @@ public class Car {
 	public void setYear(int year) {
 		this.year = year;
 	}
+	public double getRemainingPayment() {
+		return remainingPayment;
+	}
 
+	public void setRemainingPayment(double remainingPayment) {
+		this.remainingPayment = remainingPayment;
+	}
 	
 
 	@Override
@@ -64,6 +72,8 @@ public class Car {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(price);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(remainingPayment);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((vin == null) ? 0 : vin.hashCode());
 		result = prime * result + year;
@@ -91,6 +101,8 @@ public class Car {
 			return false;
 		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
 			return false;
+		if (Double.doubleToLongBits(remainingPayment) != Double.doubleToLongBits(other.remainingPayment))
+			return false;
 		if (vin == null) {
 			if (other.vin != null)
 				return false;
@@ -103,7 +115,8 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [name=" + name + ", model=" + model + ", year=" + year + ", price=" + price + ", vin=" + vin + "]";
+		return "Car [name=" + name + ", model=" + model + ", year=" + year + ", price=" + price + ", vin=" + vin
+				+ ", remainingPayment=" + remainingPayment + "]";
 	}
 	
 
