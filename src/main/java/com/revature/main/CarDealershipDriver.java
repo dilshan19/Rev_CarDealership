@@ -19,7 +19,8 @@ public class CarDealershipDriver {
 		UserInterface userInterface = new UserInterface();
 		Employee employee = new Employee();
 		Scanner scanner = new Scanner(System.in);
-		info("\n");
+		int count = 1;
+		info("\n" + count++);
 
 		try {
 
@@ -31,34 +32,14 @@ public class CarDealershipDriver {
 				info("\t\t\t\t/          Welcome To RevCar        /");
 				info("\t\t\t\t/                                   /");
 				info("\t\t\t\t ///////////////////////////////////");
-				info("\tCustomer: Enter (C)\tEmployee: Enter (E)\tTerminate Program: (T) ");
+				info("\tCustomer: Register (R)\t: Login (L)\tTerminate Program: (T) ");
 				String choice = scanner.nextLine();
-				info("User input was: " + choice);
-				if(choice.contains("C") || choice.contains("c")) {
-					info("\t>>Enter 'R' To Register");
-					info("\t>>Enter 'L' To Login!");
-
-					String choiceCust = scanner.nextLine();
-					debug("Customer input was: " + choiceCust);
-					switch(choiceCust) {
-						case "R": 	userInterface.register();
-						break;
-						case "r": 	userInterface.register();
-						break;
-						case "L":   userInterface.login();
-						break;
-						case "l": 	userInterface.login();
-						break;
-						case "T":   keepPrompting = false;
-						break;
-						case "t": 	keepPrompting = false;
-						break;
-						default: info("\tInvalid Input!");
-						break;
+				debug("User input was: " + choice);
+				if(choice.contains("R") || choice.contains("r")) {
+					userInterface.register();
 				}
-				}
-				else if(choice.contains("E") || choice.contains("e")) {
-	                 employee.employeeMenuOptions();
+				else if(choice.contains("L") || choice.contains("l")) {
+					userInterface.login();
 				}
 				else if(choice.contains("T") || choice.contains("t")){
 					break;

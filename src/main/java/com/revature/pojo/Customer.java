@@ -1,6 +1,7 @@
 package com.revature.pojo;
 
 import static com.revature.util.LoggerUtil.debug;
+import java.util.regex.Pattern;
 import static com.revature.util.LoggerUtil.error;
 import static com.revature.util.LoggerUtil.info;
 
@@ -19,9 +20,19 @@ public class Customer {
 	private String pin;
 	private Offer offer;
 	private ArrayList<Car> cars;
-	private CarDealershipDAOImpl carDAO= new CarDealershipDAOImpl();
+	private CarDealershipDAOImpl carDAO = new CarDealershipDAOImpl();
 	private Scanner scanner = new Scanner(System.in);
 
+	public Customer() {
+		super();
+	}
+	public Customer(String firstName, String lastName, String userName, String pin) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.pin = pin;
+	}
 	//Getter and Setters
 	public String getFirstName() {
 		return firstName;
@@ -44,6 +55,9 @@ public class Customer {
 	public void setPin(String pin) {
 		this.pin = pin;
 	}
+	public String getPin() {
+		return pin;
+	}
 	public Offer getOffer() {
 		return offer;
 	}
@@ -52,57 +66,100 @@ public class Customer {
 	}
 	
 	//Menu Options
-	public Car makeOffer_helper(String VIN){
-		Car temp = carDAO.pullIndividualCar(VIN);
-		return temp;
-	}
 	public Offer makeOffer() {
-		debug("Making an offerMade..");		
 		boolean stay = true;
+		boolean askVin = true;
+		boolean promptOffer = true;
 		int result = 0;
 		Offer offerMade = null;
-		Car temp = null;
+		Car singleCar = null;
+		String vin = null;
+		
 		do {
 			try {
-				info("What is the Car VIN? Press '#' to return to the Customer Menu");
-				String vin = scanner.nextLine();
-				if(vin.contains("#")) {
-					debug("User input was: " + vin);
-					stay = false;continue;
+				askVin = true;
+				promptOffer = true;
+				while(askVin) {
+					info("What is the Car VIN? Press '#' to return to the Customer Menu");
+					vin = scanner.nextLine();
+					if(vin.contains("#")) {
+						askVin = false;
+						stay = false;
+						continue;
+					}else if(Pattern.matches("[a-zA-Z0-9]{17}", vin)) {
+						askVin = false;
+					}else {
+						info("Enter the 17 alphanumeric characters located on the windshield");
+					}
 				}
-				temp = makeOffer_helper(vin);
-				if( temp != null ) {
-					info( temp.toString() );
+				if(!stay) {
+					continue;
+				}
+				vin = vin.toUpperCase();
+				singleCar = carDAO.singleCarFromCarsTable(vin);
+				if(  singleCar != null ) {
+					info( "DETAILS: " + singleCar.toString() );
 				}else {
 					info("No car found with this VIN. Try again.");
 					continue;
 				}
+				while(promptOffer) {
+					info("Would you like to make an offer for this vehicle? Press (Y) Yes or (N) No to search another VIN");
+					String resp = scanner.nextLine();
+					if(resp.contains("Y") || resp.contains("y") ) {
+						promptOffer = false;
+						continue;
+					}else if( resp.contains("N") || resp.contains("n") ) {
+						break;
+					}else {
+						info("Enter one of the two options!");
+					}
+				}
+				if(promptOffer) {	//retry lookup (Pressed N)
+					continue;
+				}
+				promptOffer = true;//reuse
+				String amount = null;
+				while(promptOffer) {
+					info("How much would you like to offer? Press (#) to start over");
+					amount = scanner.nextLine();
+					if(amount.contains("#")) {
+						break;
+					}
+					else if(Pattern.matches("[0-9]{1,8}", amount)) {	//Play safe -> 9 digits can overflow INT
+						promptOffer = false;
+					}else {
+						info("Enter up to 8 digits only!");
+					}
+				}
+				if(promptOffer) {	//contained #
+					continue;
+				}
 				offerMade = new Offer();
 				offerMade.setVin(vin);
-				offerMade.setCustomerId(userName);
-				info("How much are you offering for the " + temp.getYear() + " " + temp.getName() + " " + temp.getModel() + "?");
-				int amount = scanner.nextInt();
-				offerMade.setAmount(amount);
+				offerMade.setCustomerId(this.userName);
+				offerMade.setAmount(Integer.parseInt(amount));
+				info(offerMade.toString()) ;
 				result = carDAO.putOffer( offerMade);
 				switch (result) {
 				case 0:
-					info("Your offer could not be processed!");
+					info("There was an unexpected error in our system. Please try again.");
 					stay = false;
 					break;
 				case 1:
-					info("We have saved your offer");
+					info("You've updated your offer for VIN: " + vin);
 					stay = false;
 					break;
 				default:
-					info("\tInvalid Input!");
+					info("\tThere was an unexpected error in our system. Please try again.");
 					break;
 				}
 			}catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\tTry Again. Please enter valid the valid data type\n");
 				error(e);
 			}catch(NumberFormatException e){
 				error(e);
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\tTry Again. Please enter valid the valid data type\n");
 			}
 			catch(Exception e) {
 				debug("Different Error");
@@ -113,25 +170,26 @@ public class Customer {
 		return offerMade;
 	}
 	public void viewAllCars() {
-		info("Pulling all cars (result set -> to arrayList of cars");
-		cars = carDAO.getEntireCarList(userName);
+		debug("Pulling all cars (result set -> to arrayList of cars");
+		cars = carDAO.getEntireCarList();
 		if(cars == null) {
-			info("No cars to show");
+			info("No cars owned");
 			return;
 		}
+		debug("Car list size: " + cars.size());
 		for(Car c: cars) {
-			c.toString();
+			info(c.toString());
 		}
 	}
 	public void viewOwnedCars() {
-		info("Pulling owner's cars (result set -> to arrayList of cars");
+		debug("Pulling owner's cars (result set -> to arrayList of cars");
 		cars = carDAO.getOwnersCarList(userName);	
 		if(cars == null) {
 			info("No cars owned");
 			return;
 		}
 		for(Car c: cars) {
-			c.toString();
+			info(c.toString());
 		}
 	}
 	public void viewRemainingPayments() {

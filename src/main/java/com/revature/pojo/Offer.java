@@ -1,7 +1,7 @@
 package com.revature.pojo;
 
 public class Offer {
-	private int amount;
+	private double amount;
 	private String customerId;
 	private String vin;
 	private boolean status = false; //false = rejected so far
@@ -17,7 +17,7 @@ public class Offer {
 		this.status = status;
 	}
 
-	public int getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 	public void setAmount(int amount) {
@@ -45,7 +45,9 @@ public class Offer {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + amount;
+		long temp;
+		temp = Double.doubleToLongBits(amount);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((customerId == null) ? 0 : customerId.hashCode());
 		result = prime * result + (status ? 1231 : 1237);
 		result = prime * result + ((vin == null) ? 0 : vin.hashCode());
@@ -60,7 +62,7 @@ public class Offer {
 		if (getClass() != obj.getClass())
 			return false;
 		Offer other = (Offer) obj;
-		if (amount != other.amount)
+		if (Double.doubleToLongBits(amount) != Double.doubleToLongBits(other.amount))
 			return false;
 		if (customerId == null) {
 			if (other.customerId != null)

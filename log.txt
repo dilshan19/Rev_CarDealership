@@ -282,3 +282,1317 @@
 2019-10-04 00:57:38 INFO  root:29 - 				/                                   /
 2019-10-04 00:57:38 INFO  root:29 - 				 ///////////////////////////////////
 2019-10-04 00:57:38 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 08:44:29 INFO  root:29 - 
+
+2019-10-04 08:44:29 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 08:44:29 INFO  root:29 - 				/                                   /
+2019-10-04 08:44:29 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 08:44:29 INFO  root:29 - 				/                                   /
+2019-10-04 08:44:29 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 08:44:29 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 08:44:34 INFO  root:29 - User input was: E
+2019-10-04 08:44:34 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 08:44:37 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 08:44:38 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:44:38 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:44:38 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:44:38 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:44:38 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:44:38 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 08:44:48 DEBUG root:25 - User input was: 1
+2019-10-04 08:44:48 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 08:44:48 INFO  root:29 - 	Enter Car Make
+2019-10-04 08:44:54 INFO  root:29 - 	Enter Car Model
+2019-10-04 08:44:56 INFO  root:29 - 	Enter model year
+2019-10-04 08:45:00 INFO  root:29 - 	Enter Car VIN
+2019-10-04 08:45:17 INFO  root:29 - 	Enter Car Price
+2019-10-04 08:45:25 INFO  root:29 - Car Added to DB
+2019-10-04 08:45:25 INFO  root:29 - Car [name=Ford, model=Mustang, year=2017, price=30000.0, vin=12345678901234567, remainingPayment=30000.0]
+2019-10-04 08:45:25 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-04 08:45:25 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:45:25 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:45:25 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:45:25 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:45:25 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:45:25 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 08:49:27 INFO  root:29 - 
+
+2019-10-04 08:49:27 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 08:49:27 INFO  root:29 - 				/                                   /
+2019-10-04 08:49:27 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 08:49:27 INFO  root:29 - 				/                                   /
+2019-10-04 08:49:27 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 08:49:27 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 08:49:29 INFO  root:29 - User input was: e
+2019-10-04 08:49:29 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 08:49:32 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 08:49:35 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:49:35 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:49:35 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:49:35 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:49:35 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:49:35 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 08:49:38 DEBUG root:25 - User input was: 1
+2019-10-04 08:49:38 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 08:49:38 INFO  root:29 - 	Enter Car Make
+2019-10-04 08:49:44 INFO  root:29 - 	Enter Car Model
+2019-10-04 08:49:46 INFO  root:29 - 	Enter model year
+2019-10-04 08:49:49 INFO  root:29 - 	Enter Car VIN
+2019-10-04 08:50:00 INFO  root:29 - 	Enter Car Price
+2019-10-04 08:50:08 DEBUG root:25 - SQL error
+2019-10-04 08:50:08 INFO  root:29 - Car Added to DB
+2019-10-04 08:50:08 INFO  root:29 - Car [name=Ford , model=mustang, year=2018, price=29000.0, vin=12345678901234567, remainingPayment=29000.0]
+2019-10-04 08:50:08 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-04 08:50:08 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:50:08 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:50:08 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:50:08 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:50:08 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:50:08 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 08:52:00 INFO  root:29 - 
+
+2019-10-04 08:52:00 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 08:52:00 INFO  root:29 - 				/                                   /
+2019-10-04 08:52:00 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 08:52:00 INFO  root:29 - 				/                                   /
+2019-10-04 08:52:00 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 08:52:00 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 08:52:12 INFO  root:29 - User input was: e
+2019-10-04 08:52:12 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 08:52:13 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 08:52:14 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:52:14 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:52:14 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:52:14 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:52:14 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:52:14 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 08:52:18 DEBUG root:25 - User input was: 1
+2019-10-04 08:52:18 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 08:52:18 INFO  root:29 - 	Enter Car Make
+2019-10-04 08:52:22 INFO  root:29 - 	Enter Car Model
+2019-10-04 08:52:24 INFO  root:29 - 	Enter model year
+2019-10-04 08:52:26 INFO  root:29 - 	Enter Car VIN
+2019-10-04 08:52:30 INFO  root:29 - 	Enter Car Price
+2019-10-04 08:52:32 INFO  root:29 - insert into cars (vin, make, model, model_year, price, remaining) values(17chars,ex,ample,1990,1000.0,1000.0)
+2019-10-04 08:52:32 DEBUG root:25 - SQL error
+2019-10-04 08:52:32 INFO  root:29 - Car Added to DB
+2019-10-04 08:52:32 INFO  root:29 - Car [name=ex, model=ample, year=1990, price=1000.0, vin=17chars, remainingPayment=1000.0]
+2019-10-04 08:52:32 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-04 08:52:32 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:52:32 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:52:32 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:52:32 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:52:32 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:52:32 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 08:59:50 INFO  root:29 - 
+
+2019-10-04 08:59:50 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 08:59:50 INFO  root:29 - 				/                                   /
+2019-10-04 08:59:50 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 08:59:50 INFO  root:29 - 				/                                   /
+2019-10-04 08:59:50 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 08:59:50 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 08:59:52 INFO  root:29 - User input was: e
+2019-10-04 08:59:52 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 08:59:54 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 08:59:55 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 08:59:55 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 08:59:55 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 08:59:55 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 08:59:55 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 08:59:55 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 09:00:01 DEBUG root:25 - User input was: 1
+2019-10-04 09:00:01 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 09:00:01 INFO  root:29 - 	Enter Car Make
+2019-10-04 09:00:03 INFO  root:29 - 	Enter Car Model
+2019-10-04 09:00:04 INFO  root:29 - 	Enter model year
+2019-10-04 09:00:08 INFO  root:29 - 	Enter Car VIN
+2019-10-04 09:00:10 INFO  root:29 - 	Enter Car Price
+2019-10-04 09:00:16 INFO  root:29 - insert into cars (vin, make, model, model_year, price, remaining) values (momoo,n,o,9999,9090.0,9090.0)
+2019-10-04 09:00:16 DEBUG root:25 - SQL error
+2019-10-04 09:00:16 INFO  root:29 - Car Added to DB
+2019-10-04 09:00:16 INFO  root:29 - Car [name=n, model=o, year=9999, price=9090.0, vin=momoo, remainingPayment=9090.0]
+2019-10-04 09:00:16 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-04 09:00:16 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 09:00:16 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 09:00:16 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 09:00:16 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 09:00:16 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 09:00:16 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 09:41:33 DEBUG root:25 - select vin from cars where vin = 'Momo3'
+2019-10-04 09:41:33 DEBUG root:25 - SQL error
+2019-10-04 09:41:33 INFO  root:29 - Car Added to DB
+2019-10-04 09:44:11 DEBUG root:25 - select vin from cars where vin = 'Momo3'
+2019-10-04 09:44:11 DEBUG root:25 - SQL error
+2019-10-04 09:54:06 INFO  root:29 - 
+
+2019-10-04 09:54:06 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 09:54:06 INFO  root:29 - 				/                                   /
+2019-10-04 09:54:06 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 09:54:06 INFO  root:29 - 				/                                   /
+2019-10-04 09:54:06 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 09:54:06 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 09:54:09 INFO  root:29 - User input was: e
+2019-10-04 09:54:09 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 09:54:11 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 09:54:12 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 09:54:12 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 09:54:12 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 09:54:12 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 09:54:12 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 09:54:12 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 09:54:13 DEBUG root:25 - User input was: 1
+2019-10-04 09:54:13 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 09:54:13 INFO  root:29 - 	Enter Car Make
+2019-10-04 09:54:20 INFO  root:29 - 	Enter Car Model
+2019-10-04 09:54:28 INFO  root:29 - 	Enter model year
+2019-10-04 09:54:38 INFO  root:29 - 	Enter Car VIN
+2019-10-04 09:54:42 INFO  root:29 - 	Enter Car Price
+2019-10-04 09:54:44 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values ('Momo3','Momo3','mo',1999,9000.0,9000.0)
+2019-10-04 09:54:45 DEBUG root:25 - SQL error
+2019-10-04 09:54:45 INFO  root:29 - Car Added to DB
+2019-10-04 09:54:45 INFO  root:29 - Database error. Please contact system admin.
+2019-10-04 09:54:45 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 09:54:45 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:00:36 INFO  root:29 - 
+
+2019-10-04 10:00:36 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 10:00:36 INFO  root:29 - 				/                                   /
+2019-10-04 10:00:36 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 10:00:36 INFO  root:29 - 				/                                   /
+2019-10-04 10:00:36 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 10:00:36 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 10:00:38 INFO  root:29 - User input was: e
+2019-10-04 10:00:38 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 10:00:40 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 10:00:40 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 10:00:40 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 10:00:40 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 10:00:40 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 10:00:40 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 10:00:40 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 10:00:43 DEBUG root:25 - User input was: 1
+2019-10-04 10:00:43 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:00:43 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:00:47 INFO  root:29 - 	Enter Car Model
+2019-10-04 10:00:52 INFO  root:29 - 	Enter model year
+2019-10-04 10:00:54 INFO  root:29 - 	Enter Car VIN
+2019-10-04 10:00:57 INFO  root:29 - 	Enter Car Price
+2019-10-04 10:00:59 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values ('Momo3','Nissan','sentra',1990,10000.0,10000.0)
+2019-10-04 10:00:59 DEBUG root:25 - SQL error
+2019-10-04 10:00:59 INFO  root:29 - Car Added to DB
+2019-10-04 10:00:59 INFO  root:29 - Database error. Please contact system admin.
+2019-10-04 10:00:59 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:00:59 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:03:40 INFO  root:29 - 
+
+2019-10-04 10:03:40 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 10:03:40 INFO  root:29 - 				/                                   /
+2019-10-04 10:03:40 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 10:03:40 INFO  root:29 - 				/                                   /
+2019-10-04 10:03:40 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 10:03:40 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 10:03:45 INFO  root:29 - User input was: E
+2019-10-04 10:03:45 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 10:03:46 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 10:03:46 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 10:03:46 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 10:03:46 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 10:03:46 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 10:03:46 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 10:03:46 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 10:03:48 DEBUG root:25 - User input was: 1
+2019-10-04 10:03:48 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:03:48 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:03:55 INFO  root:29 - 	Enter Car Model
+2019-10-04 10:03:57 INFO  root:29 - 	Enter model year
+2019-10-04 10:04:20 INFO  root:29 - 	Enter Car VIN
+2019-10-04 10:04:22 INFO  root:29 - 	Enter Car Price
+2019-10-04 10:04:24 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values ('Momo3','Nissan','sentra',1990,1000.0,1000.0)
+2019-10-04 10:04:24 DEBUG root:25 - State: 23505
+2019-10-04 10:04:24 INFO  root:29 - Database error. Please contact system admin.
+2019-10-04 10:04:24 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:04:24 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:14:21 INFO  root:29 - 
+
+2019-10-04 10:14:21 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 10:14:21 INFO  root:29 - 				/                                   /
+2019-10-04 10:14:21 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 10:14:21 INFO  root:29 - 				/                                   /
+2019-10-04 10:14:21 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 10:14:21 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 10:14:23 INFO  root:29 - User input was: E
+2019-10-04 10:14:23 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 10:14:24 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 10:14:25 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 10:14:25 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 10:14:25 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 10:14:25 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 10:14:25 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 10:14:25 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 10:14:28 DEBUG root:25 - User input was: 1
+2019-10-04 10:14:28 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:14:28 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:14:33 INFO  root:29 - 	Enter Car Model
+2019-10-04 10:14:36 INFO  root:29 - 	Enter model year
+2019-10-04 10:14:37 INFO  root:29 - 	Enter Car VIN
+2019-10-04 10:14:44 INFO  root:29 - 	Enter Car Price
+2019-10-04 10:14:46 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values ('mOmo3','Ford','Mustang',2019,9000.0,9000.0)
+2019-10-04 10:14:46 DEBUG root:25 - Car with VIN: mOmo3 inserted
+2019-10-04 10:14:46 DEBUG root:25 - addCar transaction complete
+2019-10-04 10:14:46 INFO  root:29 - Car [name=Ford, model=Mustang, year=2019, price=9000.0, vin=mOmo3, remainingPayment=9000.0]
+2019-10-04 10:14:46 INFO  root:29 - 	The car was successfully added to the Lot:
+2019-10-04 10:14:46 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 10:14:46 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 10:14:46 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 10:14:46 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 10:14:46 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 10:14:46 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 10:16:31 INFO  root:29 - 
+
+2019-10-04 10:16:31 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 10:16:31 INFO  root:29 - 				/                                   /
+2019-10-04 10:16:31 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 10:16:31 INFO  root:29 - 				/                                   /
+2019-10-04 10:16:31 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 10:16:31 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 10:16:34 INFO  root:29 - User input was: E
+2019-10-04 10:16:34 INFO  root:29 - 	>>Enter Enter your Username!
+2019-10-04 10:16:36 INFO  root:29 - 	>>Enter Enter Your 4 Digit PIN!
+2019-10-04 10:16:37 INFO  root:29 - 	Welcome to the Employee Menu
+2019-10-04 10:16:37 INFO  root:29 - 	>>Enter '1' Add A Car to The Lot!
+2019-10-04 10:16:37 INFO  root:29 - 	>>Enter '2' Accept or reject an offer!
+2019-10-04 10:16:37 INFO  root:29 - 	>>Enter '3' View Payments!
+2019-10-04 10:16:37 INFO  root:29 - 	>>Enter '4' Remove A Car From The Lot!
+2019-10-04 10:16:37 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-04 10:16:39 DEBUG root:25 - User input was: 1
+2019-10-04 10:16:39 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:16:39 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:16:44 INFO  root:29 - 	Enter Car Model
+2019-10-04 10:16:47 INFO  root:29 - 	Enter model year
+2019-10-04 10:16:52 INFO  root:29 - 	Enter Car VIN
+2019-10-04 10:16:58 INFO  root:29 - 	Enter Car Price
+2019-10-04 10:17:01 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values ('mOmo3','tesla','model 2',2010,1000.0,1000.0)
+2019-10-04 10:17:01 DEBUG root:25 - State: 0
+2019-10-04 10:17:01 INFO  root:29 - Database error. Please contact system admin.
+2019-10-04 10:17:01 INFO  root:29 - 	You have chose to add a car.
+2019-10-04 10:17:01 INFO  root:29 - 	Enter Car Make
+2019-10-04 10:44:36 DEBUG root:25 - select count(*) from cars where vin = 'Momo3'
+2019-10-04 10:44:36 DEBUG root:25 - State: 42P01
+2019-10-04 10:46:23 DEBUG root:25 - select count(*) from cars where vin = 'Momo3'
+2019-10-04 10:46:23 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 10:48:44 DEBUG root:25 - select count(*) from cars where vin = 'Momo3'
+2019-10-04 10:48:44 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 10:49:44 DEBUG root:25 - select count(*) from cars where vin = 'Momo31'
+2019-10-04 10:49:44 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-04 10:51:08 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 10:56:20 INFO  root:29 - 
+
+2019-10-04 10:56:20 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 10:56:20 INFO  root:29 - 				/                                   /
+2019-10-04 10:56:20 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 10:56:20 INFO  root:29 - 				/                                   /
+2019-10-04 10:56:20 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 10:56:20 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 12:50:29 INFO  root:29 - 
+
+2019-10-04 12:50:29 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-04 12:50:29 INFO  root:29 - 				/                                   /
+2019-10-04 12:50:29 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-04 12:50:29 INFO  root:29 - 				/                                   /
+2019-10-04 12:50:29 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-04 12:50:29 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-04 12:50:32 INFO  root:29 - User input was: c
+2019-10-04 12:50:32 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-04 12:50:32 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-04 12:50:34 DEBUG root:25 - Customer input was: R
+2019-10-04 12:50:34 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-04 12:50:45 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-04 12:50:48 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-04 12:50:50 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-04 12:51:10 INFO  root:29 - You've entered: LimpMan621000
+2019-10-04 12:51:10 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-04 12:51:21 INFO  root:29 - 
+	Invalid Input! Try Again!
+
+2019-10-04 12:51:21 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-04 12:51:24 DEBUG root:25 - Pin: 1234
+2019-10-04 12:51:24 INFO  root:29 - Account created.
+2019-10-04 12:51:24 INFO  root:29 - Please Log in
+2019-10-04 12:51:24 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-04 13:27:57 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 13:34:51 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users where username = 'LimpMan'
+2019-10-04 13:34:51 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 13:35:06 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users where username = 'LimpMn'
+2019-10-04 13:35:07 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-04 13:35:23 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values ('JYAVG04E38A012345','Avalanche','Chevy',2006,10000.5,10000.5)
+2019-10-04 14:05:56 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users where username = ?
+2019-10-04 14:05:56 DEBUG root:25 - State: 42809
+2019-10-04 14:07:37 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 14:07:37 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-04 14:07:37 DEBUG root:25 - Choose a valid table
+2019-10-04 14:07:37 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 15:11:59 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) + values (?,?,?,?,?,?,?) 
+2019-10-04 15:11:59 DEBUG root:25 - State: 42809
+2019-10-04 15:13:55 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) + values (?,?,?,?,?,?) 
+2019-10-04 15:13:55 DEBUG root:25 - State: 42809
+2019-10-04 15:14:01 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) + values (?,?,?,?,?,?) 
+2019-10-04 15:14:01 DEBUG root:25 - State: 42809
+2019-10-04 15:19:46 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) + values (?,?,?,?,?,?) 
+2019-10-04 15:19:46 DEBUG root:25 - State: 42601
+2019-10-04 15:20:10 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-04 15:20:10 DEBUG root:25 - State: 2000
+2019-10-04 15:37:39 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-04 15:37:39 DEBUG root:25 - State: 23505
+2019-10-04 15:39:07 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-04 15:45:40 DEBUG root:25 - State: 22023
+2019-10-04 15:47:06 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-04 15:48:48 DEBUG root:25 - State: 42809
+2019-10-04 15:48:55 DEBUG root:25 - State: 42809
+2019-10-04 15:51:22 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 15:52:37 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 15:52:37 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-04 15:52:37 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-04 16:52:54 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-04 16:52:54 DEBUG root:25 - State: 23505
+2019-10-04 16:53:14 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 01:26:08 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 01:26:08 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 01:26:08 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 01:53:38 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 01:53:48 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:00:43 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:00:53 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:00:55 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:01:01 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:01:35 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:01:46 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:10:36 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:10:44 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:12:44 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 02:14:12 DEBUG root:25 - insert into cars (vin, make, model, model_year, price, remaining) values (?,?,?,?,?,?)
+2019-10-05 11:09:23 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 11:09:23 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 11:09:23 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 11:15:40 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values (?,?,?,?)
+2019-10-05 11:16:45 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values (?,?,?,?)
+2019-10-05 11:16:54 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values (?,?,?,?)
+2019-10-05 11:17:01 INFO  root:29 - 
+
+2019-10-05 11:17:01 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 11:17:01 INFO  root:29 - 				/                                   /
+2019-10-05 11:17:01 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 11:17:01 INFO  root:29 - 				/                                   /
+2019-10-05 11:17:01 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 11:17:01 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 11:17:04 INFO  root:29 - User input was: C
+2019-10-05 11:17:04 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 11:17:04 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 11:17:06 DEBUG root:25 - Customer input was: R
+2019-10-05 11:17:06 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-05 11:17:08 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-05 11:17:16 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-05 11:17:18 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 11:17:24 INFO  root:29 - You've entered: GReyes2
+2019-10-05 11:17:24 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 11:17:24 INFO  root:29 - This username has been taken. Try another!
+2019-10-05 11:17:24 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-05 11:17:27 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values (?,?,?,?)
+2019-10-05 11:17:27 DEBUG root:25 - State: 22023
+2019-10-05 11:17:27 INFO  root:29 - Database could not process your information. Please try again.
+2019-10-05 11:17:27 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 11:17:27 INFO  root:29 - 				/                                   /
+2019-10-05 11:17:27 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 11:17:27 INFO  root:29 - 				/                                   /
+2019-10-05 11:17:27 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 11:17:27 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 11:18:55 INFO  root:29 - 
+
+2019-10-05 11:18:55 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 11:18:55 INFO  root:29 - 				/                                   /
+2019-10-05 11:18:55 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 11:18:55 INFO  root:29 - 				/                                   /
+2019-10-05 11:18:55 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 11:18:55 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 11:18:57 INFO  root:29 - User input was: c
+2019-10-05 11:18:57 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 11:18:57 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 11:18:59 DEBUG root:25 - Customer input was: r
+2019-10-05 11:18:59 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-05 11:19:05 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-05 11:19:06 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-05 11:19:10 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 11:19:11 INFO  root:29 - Username must have 6-18 Alphanumeric characters
+2019-10-05 11:19:11 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 11:19:28 INFO  root:29 - Starting over
+2019-10-05 11:19:28 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-05 11:19:31 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-05 11:19:34 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-05 11:19:36 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 11:19:38 INFO  root:29 - You've entered: GReyes2
+2019-10-05 11:19:39 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 11:19:39 INFO  root:29 - This username has been taken. Try another!
+2019-10-05 11:19:39 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-05 11:26:07 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values ('GReyes2','Gilbert','Reyes','2222')
+2019-10-05 11:26:07 DEBUG root:25 - State: 42804
+2019-10-05 11:26:07 INFO  root:29 - Database could not process your information. Please try again.
+2019-10-05 11:26:07 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 11:26:07 INFO  root:29 - 				/                                   /
+2019-10-05 11:26:07 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 11:26:07 INFO  root:29 - 				/                                   /
+2019-10-05 11:26:07 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 11:26:07 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 11:31:15 INFO  root:29 - 
+
+2019-10-05 11:31:15 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 11:31:15 INFO  root:29 - 				/                                   /
+2019-10-05 11:31:15 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 11:31:15 INFO  root:29 - 				/                                   /
+2019-10-05 11:31:15 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 11:31:15 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 11:33:57 INFO  root:29 - User input was: C
+2019-10-05 11:33:57 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 11:33:57 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 11:33:58 DEBUG root:25 - Customer input was: r
+2019-10-05 11:33:58 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-05 11:34:04 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-05 11:34:07 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-05 11:34:09 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 11:34:13 INFO  root:29 - You've entered: GReyes1
+2019-10-05 11:34:13 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 11:34:13 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-05 11:34:16 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values ('GReyes1','Gerard','Reyes','1111')
+2019-10-05 11:34:16 DEBUG root:25 - Pin: 1111
+2019-10-05 11:34:16 INFO  root:29 - Account created.
+2019-10-05 11:34:16 INFO  root:29 - Please Log in
+2019-10-05 11:34:16 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 12:54:44 DEBUG root:25 - mockPreparedStmnt
+2019-10-05 12:56:52 DEBUG root:25 - mockPreparedStmnt
+2019-10-05 12:57:17 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes1' AND pin = '1111')
+2019-10-05 12:57:17 DEBUG root:25 - State: 24000
+2019-10-05 12:57:17 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes2' AND pin = '1111')
+2019-10-05 12:57:17 DEBUG root:25 - State: 24000
+2019-10-05 12:58:50 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes1' AND pin = '1111')
+2019-10-05 12:58:50 DEBUG root:25 - Table 2 has 1 row(s).
+2019-10-05 12:58:50 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes2' AND pin = '1111')
+2019-10-05 12:58:50 DEBUG root:25 - Table 2 has 0 row(s).
+2019-10-05 12:58:50 DEBUG root:25 - Past
+2019-10-05 12:59:33 DEBUG root:25 - mockPreparedStmnt
+2019-10-05 13:04:10 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes1' AND pin = '1111')
+2019-10-05 13:04:10 DEBUG root:25 - Table 2 has 1 row(s).
+2019-10-05 13:04:10 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes2' AND pin = '1111')
+2019-10-05 13:04:10 DEBUG root:25 - Table 2 has 0 row(s).
+2019-10-05 13:04:10 DEBUG root:25 - SELECT COUNT(*) AS rowcount FROM users WHERE (username = 'GReyes1' AND pin = '11112')
+2019-10-05 13:04:10 DEBUG root:25 - Table 2 has 0 row(s).
+2019-10-05 13:06:34 INFO  root:29 - 
+
+2019-10-05 13:06:34 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:06:34 INFO  root:29 - 				/                                   /
+2019-10-05 13:06:34 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:06:34 INFO  root:29 - 				/                                   /
+2019-10-05 13:06:34 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:06:34 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:06:36 INFO  root:29 - User input was: C
+2019-10-05 13:06:36 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:06:36 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:06:43 DEBUG root:25 - Customer input was: L
+2019-10-05 13:06:43 INFO  root:29 - Please Log in
+2019-10-05 13:06:43 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:06:52 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:06:52 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:06:52 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:06:58 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:06:58 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:07:13 DEBUG root:25 - Table 0 has 0 row(s).
+2019-10-05 13:07:13 INFO  root:29 - Wrong Combination.
+2019-10-05 13:07:13 INFO  root:29 - Press (#) For Main Menu Or Enter Any Other Key To Retry
+2019-10-05 13:07:18 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:07:22 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:07:22 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:07:22 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:07:27 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:07:27 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:07:30 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:07:30 DEBUG root:25 - Logging in....
+2019-10-05 13:07:30 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:07:30 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:07:30 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:07:30 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:07:30 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:07:30 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:07:39 DEBUG root:25 - User input was: Q
+2019-10-05 13:07:39 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:07:39 INFO  root:29 - 				/                                   /
+2019-10-05 13:07:39 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:07:39 INFO  root:29 - 				/                                   /
+2019-10-05 13:07:39 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:07:39 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:07:43 INFO  root:29 - User input was: C
+2019-10-05 13:07:43 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:07:43 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:07:44 DEBUG root:25 - Customer input was: R
+2019-10-05 13:07:44 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-05 13:07:52 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-05 13:07:57 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-05 13:07:59 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 13:08:05 INFO  root:29 - You've entered: GReyes2
+2019-10-05 13:08:05 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:08:05 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-05 13:08:10 INFO  root:29 - Starting over
+2019-10-05 13:08:10 INFO  root:29 - Enter '#' to exit now, or press any other key to continue registering
+2019-10-05 13:08:13 INFO  root:29 - 
+	>>Enter Your First Name!
+
+2019-10-05 13:08:16 INFO  root:29 - 
+	>>Enter Your Last Name!
+
+2019-10-05 13:08:19 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 13:08:40 INFO  root:29 - You've entered: GReyes1
+2019-10-05 13:08:40 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:08:40 INFO  root:29 - This username has been taken. Try another!
+2019-10-05 13:08:40 INFO  root:29 - 
+	>>Enter a Username or Press '#' to Start Over!
+
+2019-10-05 13:08:45 INFO  root:29 - You've entered: GReyes2
+2019-10-05 13:08:45 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:08:45 INFO  root:29 - 
+	>>Enter your 4 Digit Pin or Press Q to Start Over!
+
+2019-10-05 13:09:18 DEBUG root:25 - insert into users (username, first_name, last_name, pin) values ('GReyes2','Gilbert','Reyes','2222')
+2019-10-05 13:09:18 DEBUG root:25 - Pin: 2222
+2019-10-05 13:09:18 INFO  root:29 - Account created.
+2019-10-05 13:09:18 INFO  root:29 - Please Log in
+2019-10-05 13:09:18 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:09:31 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:09:31 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:09:31 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:09:35 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:09:35 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:09:39 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:09:39 DEBUG root:25 - Logging in....
+2019-10-05 13:09:39 INFO  root:29 - 	Welcome to Customer Menu GReyes2
+2019-10-05 13:09:39 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:09:39 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:09:39 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:09:39 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:09:39 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:32:39 INFO  root:29 - 
+
+2019-10-05 13:32:39 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:32:39 INFO  root:29 - 				/                                   /
+2019-10-05 13:32:39 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:32:39 INFO  root:29 - 				/                                   /
+2019-10-05 13:32:39 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:32:39 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:32:41 INFO  root:29 - User input was: C
+2019-10-05 13:32:41 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:32:41 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:32:43 DEBUG root:25 - Customer input was: l
+2019-10-05 13:32:43 INFO  root:29 - Please Log in
+2019-10-05 13:32:43 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:32:47 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:32:47 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:32:50 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:32:50 DEBUG root:25 - Logging in....
+2019-10-05 13:32:50 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:32:50 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:32:50 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:32:50 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:32:50 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:32:50 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:32:52 DEBUG root:25 - User input was: 1
+2019-10-05 13:32:52 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:32:52 INFO  root:29 - Check: []
+2019-10-05 13:32:52 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:32:52 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:32:52 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:32:52 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:32:52 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:32:52 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:34:14 DEBUG root:25 - User input was: 1
+2019-10-05 13:34:14 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:34:14 INFO  root:29 - Check: []
+2019-10-05 13:34:14 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:34:14 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:34:14 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:34:14 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:34:14 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:34:14 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:39:00 INFO  root:29 - 
+
+2019-10-05 13:39:00 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:39:00 INFO  root:29 - 				/                                   /
+2019-10-05 13:39:00 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:39:00 INFO  root:29 - 				/                                   /
+2019-10-05 13:39:00 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:39:00 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:39:01 INFO  root:29 - User input was: c
+2019-10-05 13:39:01 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:39:01 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:39:03 DEBUG root:25 - Customer input was: l
+2019-10-05 13:39:03 INFO  root:29 - Please Log in
+2019-10-05 13:39:03 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:39:07 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:39:07 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:39:08 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:39:08 DEBUG root:25 - Logging in....
+2019-10-05 13:39:08 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:39:08 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:39:08 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:39:08 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:39:08 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:39:08 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:39:11 DEBUG root:25 - User input was: 1
+2019-10-05 13:39:11 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:39:11 DEBUG root:25 - Different Error
+2019-10-05 13:39:11 ERROR root:17 - java.lang.NullPointerException
+2019-10-05 13:39:11 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:39:11 INFO  root:29 - 				/                                   /
+2019-10-05 13:39:11 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:39:11 INFO  root:29 - 				/                                   /
+2019-10-05 13:39:11 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:39:11 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:41:35 INFO  root:29 - 
+
+2019-10-05 13:41:35 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:41:35 INFO  root:29 - 				/                                   /
+2019-10-05 13:41:35 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:41:35 INFO  root:29 - 				/                                   /
+2019-10-05 13:41:35 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:41:35 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:41:36 INFO  root:29 - User input was: c
+2019-10-05 13:41:36 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:41:36 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:41:38 DEBUG root:25 - Customer input was: l
+2019-10-05 13:41:38 INFO  root:29 - Please Log in
+2019-10-05 13:41:38 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:41:41 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:41:41 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:41:43 DEBUG root:25 - Table 0 has 0 row(s).
+2019-10-05 13:41:43 INFO  root:29 - Wrong Combination.
+2019-10-05 13:41:43 INFO  root:29 - Press (#) For Main Menu Or Enter Any Other Key To Retry
+2019-10-05 13:41:45 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:41:49 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:41:49 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:41:51 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:41:51 DEBUG root:25 - Logging in....
+2019-10-05 13:41:51 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:41:51 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:41:51 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:41:51 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:41:51 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:41:51 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:41:53 DEBUG root:25 - User input was: 1
+2019-10-05 13:41:53 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:41:53 DEBUG root:25 - Different Error
+2019-10-05 13:41:53 ERROR root:17 - java.lang.NullPointerException
+2019-10-05 13:41:53 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:41:53 INFO  root:29 - 				/                                   /
+2019-10-05 13:41:53 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:41:53 INFO  root:29 - 				/                                   /
+2019-10-05 13:41:53 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:41:53 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:42:26 INFO  root:29 - 
+
+2019-10-05 13:42:26 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:42:26 INFO  root:29 - 				/                                   /
+2019-10-05 13:42:26 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:42:26 INFO  root:29 - 				/                                   /
+2019-10-05 13:42:26 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:42:26 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:42:29 INFO  root:29 - User input was: c
+2019-10-05 13:42:29 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:42:29 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:42:33 DEBUG root:25 - Customer input was: GReyes1
+2019-10-05 13:42:33 INFO  root:29 - 	Invalid Input!
+2019-10-05 13:42:33 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:42:33 INFO  root:29 - 				/                                   /
+2019-10-05 13:42:33 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:42:33 INFO  root:29 - 				/                                   /
+2019-10-05 13:42:33 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:42:33 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:42:35 INFO  root:29 - User input was: 1111
+2019-10-05 13:42:35 INFO  root:29 - Invalid Input!
+2019-10-05 13:42:35 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:42:35 INFO  root:29 - 				/                                   /
+2019-10-05 13:42:35 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:42:35 INFO  root:29 - 				/                                   /
+2019-10-05 13:42:35 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:42:35 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:42:37 INFO  root:29 - User input was: c
+2019-10-05 13:42:37 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:42:37 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:42:39 DEBUG root:25 - Customer input was: l
+2019-10-05 13:42:39 INFO  root:29 - Please Log in
+2019-10-05 13:42:39 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:42:43 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:42:43 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:42:43 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:42:45 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:42:45 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:42:45 INFO  root:29 - 
+	>>Enter Your Username!
+
+2019-10-05 13:46:25 INFO  root:29 - 
+
+2019-10-05 13:46:25 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:46:25 INFO  root:29 - 				/                                   /
+2019-10-05 13:46:25 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:46:25 INFO  root:29 - 				/                                   /
+2019-10-05 13:46:25 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:46:25 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:46:26 INFO  root:29 - User input was: c
+2019-10-05 13:46:26 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:46:26 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:46:28 DEBUG root:25 - Customer input was: l
+2019-10-05 13:46:28 INFO  root:29 - Please Log in
+2019-10-05 13:46:28 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:46:32 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:46:32 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:46:32 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:46:36 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:46:36 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:46:36 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:47:18 INFO  root:29 - 
+
+2019-10-05 13:47:18 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:47:18 INFO  root:29 - 				/                                   /
+2019-10-05 13:47:18 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:47:18 INFO  root:29 - 				/                                   /
+2019-10-05 13:47:18 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:47:18 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:47:29 INFO  root:29 - User input was: c
+2019-10-05 13:47:29 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:47:29 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:47:30 DEBUG root:25 - Customer input was: l
+2019-10-05 13:47:30 INFO  root:29 - Please Log in
+2019-10-05 13:47:30 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:47:33 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:47:33 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:47:50 INFO  root:29 - 
+
+2019-10-05 13:47:50 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:47:50 INFO  root:29 - 				/                                   /
+2019-10-05 13:47:50 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:47:50 INFO  root:29 - 				/                                   /
+2019-10-05 13:47:50 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:47:50 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:47:53 INFO  root:29 - User input was: C
+2019-10-05 13:47:53 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:47:53 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:47:53 DEBUG root:25 - Customer input was: l
+2019-10-05 13:47:53 INFO  root:29 - Please Log in
+2019-10-05 13:47:53 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:47:57 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:47:57 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:49:32 INFO  root:29 - 
+
+2019-10-05 13:49:32 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:49:32 INFO  root:29 - 				/                                   /
+2019-10-05 13:49:32 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:49:32 INFO  root:29 - 				/                                   /
+2019-10-05 13:49:32 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:49:32 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:49:37 INFO  root:29 - User input was: c
+2019-10-05 13:49:37 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:49:37 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:49:38 DEBUG root:25 - Customer input was: l
+2019-10-05 13:49:38 INFO  root:29 - Please Log in
+2019-10-05 13:49:38 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:49:44 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:49:44 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:49:44 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:49:50 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:52:25 INFO  root:29 - 
+
+2019-10-05 13:52:25 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:52:25 INFO  root:29 - 				/                                   /
+2019-10-05 13:52:25 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:52:25 INFO  root:29 - 				/                                   /
+2019-10-05 13:52:25 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:52:25 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:52:26 INFO  root:29 - User input was: C
+2019-10-05 13:52:26 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:52:26 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:52:27 DEBUG root:25 - Customer input was: l
+2019-10-05 13:52:27 INFO  root:29 - Please Log in
+2019-10-05 13:52:27 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:52:28 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:52:28 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:52:28 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:52:30 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:52:30 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:52:30 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:52:31 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 13:52:31 INFO  root:29 - That username is not in our database! Try again.
+2019-10-05 13:52:31 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:52:38 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:52:38 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:52:40 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:52:40 DEBUG root:25 - Logging in....
+2019-10-05 13:52:40 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:52:40 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:52:40 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:52:40 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:52:40 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:52:40 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:52:42 DEBUG root:25 - User input was: q
+2019-10-05 13:52:42 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:52:42 INFO  root:29 - 				/                                   /
+2019-10-05 13:52:42 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:52:42 INFO  root:29 - 				/                                   /
+2019-10-05 13:52:42 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:52:42 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:52:44 INFO  root:29 - User input was: C
+2019-10-05 13:52:44 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:52:44 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:52:45 DEBUG root:25 - Customer input was: l
+2019-10-05 13:52:45 INFO  root:29 - Please Log in
+2019-10-05 13:52:45 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:52:55 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:52:55 INFO  root:29 - 				/                                   /
+2019-10-05 13:52:55 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:52:55 INFO  root:29 - 				/                                   /
+2019-10-05 13:52:55 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:52:55 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:53:09 INFO  root:29 - User input was: C
+2019-10-05 13:53:09 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:53:09 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:53:10 DEBUG root:25 - Customer input was: l
+2019-10-05 13:53:10 INFO  root:29 - Please Log in
+2019-10-05 13:53:10 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:53:14 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:53:14 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:53:16 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:53:16 DEBUG root:25 - Logging in....
+2019-10-05 13:53:16 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:53:16 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:53:16 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:53:16 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:53:16 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:53:16 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:53:18 DEBUG root:25 - User input was: 1
+2019-10-05 13:53:18 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:53:18 INFO  root:29 - No cars to show
+2019-10-05 13:53:18 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:53:18 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:53:18 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:53:18 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:53:18 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:53:18 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:54:59 INFO  root:29 - 
+
+2019-10-05 13:54:59 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:54:59 INFO  root:29 - 				/                                   /
+2019-10-05 13:54:59 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:54:59 INFO  root:29 - 				/                                   /
+2019-10-05 13:54:59 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:54:59 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:55:03 INFO  root:29 - User input was: C
+2019-10-05 13:55:03 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:55:03 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:55:04 DEBUG root:25 - Customer input was: l
+2019-10-05 13:55:04 INFO  root:29 - Please Log in
+2019-10-05 13:55:04 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:55:07 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:55:07 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:55:08 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:55:08 DEBUG root:25 - Logging in....
+2019-10-05 13:55:08 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:55:08 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:55:08 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:55:08 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:55:08 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:55:08 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:55:10 DEBUG root:25 - User input was: 1
+2019-10-05 13:55:10 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:55:10 DEBUG root:25 - State: 42809
+2019-10-05 13:55:10 INFO  root:29 - No cars to show
+2019-10-05 13:55:10 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:55:10 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:55:10 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:55:10 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:55:10 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:55:10 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:56:06 INFO  root:29 - 
+
+2019-10-05 13:56:06 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:56:06 INFO  root:29 - 				/                                   /
+2019-10-05 13:56:06 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:56:06 INFO  root:29 - 				/                                   /
+2019-10-05 13:56:06 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:56:06 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:56:07 INFO  root:29 - User input was: c
+2019-10-05 13:56:07 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:56:07 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:56:08 DEBUG root:25 - Customer input was: l
+2019-10-05 13:56:08 INFO  root:29 - Please Log in
+2019-10-05 13:56:08 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:56:11 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:56:11 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:56:12 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:56:12 DEBUG root:25 - Logging in....
+2019-10-05 13:56:12 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:56:12 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:56:12 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:56:12 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:56:12 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:56:12 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:56:14 DEBUG root:25 - User input was: 1
+2019-10-05 13:56:14 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:56:14 DEBUG root:25 - Car list size: 0
+2019-10-05 13:56:14 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:56:14 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:56:14 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:56:14 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:56:14 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:56:14 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:59:14 INFO  root:29 - 
+
+2019-10-05 13:59:14 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 13:59:14 INFO  root:29 - 				/                                   /
+2019-10-05 13:59:14 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 13:59:14 INFO  root:29 - 				/                                   /
+2019-10-05 13:59:14 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 13:59:14 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 13:59:16 INFO  root:29 - User input was: C
+2019-10-05 13:59:16 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 13:59:16 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 13:59:17 DEBUG root:25 - Customer input was: l
+2019-10-05 13:59:17 INFO  root:29 - Please Log in
+2019-10-05 13:59:17 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 13:59:20 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 13:59:20 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 13:59:23 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 13:59:23 DEBUG root:25 - Logging in....
+2019-10-05 13:59:23 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:59:23 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:59:23 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:59:23 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:59:23 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:59:23 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 13:59:24 DEBUG root:25 - User input was: 1
+2019-10-05 13:59:24 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 13:59:24 DEBUG root:25 - Car list size - 0
+2019-10-05 13:59:24 DEBUG root:25 - Car list size: 0
+2019-10-05 13:59:24 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 13:59:24 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 13:59:24 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 13:59:24 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 13:59:24 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 13:59:24 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:01:45 INFO  root:29 - 
+
+2019-10-05 14:01:45 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 14:01:45 INFO  root:29 - 				/                                   /
+2019-10-05 14:01:45 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 14:01:45 INFO  root:29 - 				/                                   /
+2019-10-05 14:01:45 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 14:01:45 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 14:01:47 INFO  root:29 - User input was: C
+2019-10-05 14:01:47 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 14:01:47 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 14:01:48 DEBUG root:25 - Customer input was: l
+2019-10-05 14:01:48 INFO  root:29 - Please Log in
+2019-10-05 14:01:48 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 14:01:50 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 14:01:50 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 14:01:52 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 14:01:52 DEBUG root:25 - Logging in....
+2019-10-05 14:01:52 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 14:01:52 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 14:01:52 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 14:01:52 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 14:01:52 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 14:01:52 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:01:53 DEBUG root:25 - User input was: 1
+2019-10-05 14:01:53 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 14:01:53 DEBUG root:25 - Car list size - 0
+2019-10-05 14:01:53 DEBUG root:25 - Car list size: 0
+2019-10-05 14:01:53 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 14:01:53 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 14:01:53 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 14:01:53 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 14:01:53 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 14:01:53 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:04:31 INFO  root:29 - 
+
+2019-10-05 14:04:31 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 14:04:31 INFO  root:29 - 				/                                   /
+2019-10-05 14:04:31 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 14:04:31 INFO  root:29 - 				/                                   /
+2019-10-05 14:04:31 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 14:04:31 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 14:04:33 INFO  root:29 - User input was: c
+2019-10-05 14:04:33 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 14:04:33 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 14:04:34 DEBUG root:25 - Customer input was: L
+2019-10-05 14:04:34 INFO  root:29 - Please Log in
+2019-10-05 14:04:34 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 14:04:38 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 14:04:38 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 14:04:41 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 14:04:41 DEBUG root:25 - Logging in....
+2019-10-05 14:04:41 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 14:04:41 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 14:04:41 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 14:04:41 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 14:04:41 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 14:04:41 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:04:42 DEBUG root:25 - User input was: 1
+2019-10-05 14:04:42 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 14:04:42 DEBUG root:25 - Car list size - 0
+2019-10-05 14:04:42 DEBUG root:25 - Car list size: 0
+2019-10-05 14:04:42 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 14:04:42 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 14:04:42 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 14:04:42 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 14:04:42 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 14:04:42 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:05:48 INFO  root:29 - 
+
+2019-10-05 14:05:48 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 14:05:48 INFO  root:29 - 				/                                   /
+2019-10-05 14:05:48 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 14:05:48 INFO  root:29 - 				/                                   /
+2019-10-05 14:05:48 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 14:05:48 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 14:05:49 INFO  root:29 - User input was: c
+2019-10-05 14:05:49 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 14:05:49 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 14:05:52 DEBUG root:25 - Customer input was: l
+2019-10-05 14:05:52 INFO  root:29 - Please Log in
+2019-10-05 14:05:52 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 14:05:55 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 14:05:55 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 14:05:57 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 14:05:57 DEBUG root:25 - Logging in....
+2019-10-05 14:05:57 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 14:05:57 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 14:05:57 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 14:05:57 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 14:05:57 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 14:05:57 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:05:58 DEBUG root:25 - User input was: 1
+2019-10-05 14:05:58 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 14:05:59 DEBUG root:25 - State: 24000
+2019-10-05 14:05:59 INFO  root:29 - No cars to show
+2019-10-05 14:05:59 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 14:05:59 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 14:05:59 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 14:05:59 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 14:05:59 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 14:05:59 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 14:10:03 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 14:10:49 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 14:10:49 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 14:10:49 DEBUG root:25 - MyTable has 0 row(s).
+2019-10-05 14:10:50 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 17:52:09 INFO  root:29 - 
+
+2019-10-05 17:52:09 INFO  root:29 - 				 /////////////////////////////////// 
+2019-10-05 17:52:09 INFO  root:29 - 				/                                   /
+2019-10-05 17:52:09 INFO  root:29 - 				/          Welcome To RevCar        /
+2019-10-05 17:52:09 INFO  root:29 - 				/                                   /
+2019-10-05 17:52:09 INFO  root:29 - 				 ///////////////////////////////////
+2019-10-05 17:52:09 INFO  root:29 - 	Customer: Enter (C)	Employee: Enter (E)	Terminate Program: (T) 
+2019-10-05 17:52:12 INFO  root:29 - User input was: c
+2019-10-05 17:52:12 INFO  root:29 - 	>>Enter 'R' To Register
+2019-10-05 17:52:12 INFO  root:29 - 	>>Enter 'L' To Login!
+2019-10-05 17:52:14 DEBUG root:25 - Customer input was: l
+2019-10-05 17:52:14 INFO  root:29 - Please Log in
+2019-10-05 17:52:14 INFO  root:29 - 
+	>>Enter your username or (#) to quit!
+
+2019-10-05 17:52:18 DEBUG root:25 - MyTable has 1 row(s).
+2019-10-05 17:52:18 INFO  root:29 - 
+	>>Enter Your PIN!
+
+2019-10-05 17:52:21 DEBUG root:25 - Table 0 has 1 row(s).
+2019-10-05 17:52:21 DEBUG root:25 - Logging in....
+2019-10-05 17:52:21 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 17:52:21 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 17:52:21 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 17:52:21 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 17:52:21 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 17:52:21 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 17:52:22 DEBUG root:25 - User input was: 1
+2019-10-05 17:52:22 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 17:52:22 INFO  root:29 - COUNTX: 0
+2019-10-05 17:52:22 INFO  root:29 - COUNTX: 0
+2019-10-05 17:52:22 INFO  root:29 - COUNTX: 0
+2019-10-05 17:52:22 DEBUG root:25 - Car list size - 3
+2019-10-05 17:52:22 DEBUG root:25 - Car list size: 3
+2019-10-05 17:52:22 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 17:52:22 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 17:52:22 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 17:52:22 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 17:52:22 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 17:52:22 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
+2019-10-05 18:09:33 DEBUG root:25 - User input was: 1
+2019-10-05 18:09:33 DEBUG root:25 - Pulling all cars (result set -> to arrayList of cars
+2019-10-05 18:09:33 INFO  root:29 - COUNTX: 0
+2019-10-05 18:09:33 INFO  root:29 - COUNTX: 0
+2019-10-05 18:09:33 INFO  root:29 - COUNTX: 0
+2019-10-05 18:09:33 DEBUG root:25 - Car list size - 3
+2019-10-05 18:09:33 DEBUG root:25 - Car list size: 3
+2019-10-05 18:09:33 INFO  root:29 - 	Welcome to Customer Menu GReyes1
+2019-10-05 18:09:33 INFO  root:29 - 	>>Enter '1' View Cars
+2019-10-05 18:09:33 INFO  root:29 - 	>>Enter '2' Make An Offer!
+2019-10-05 18:09:33 INFO  root:29 - 	>>Enter '3' View Owned Cars!
+2019-10-05 18:09:33 INFO  root:29 - 	>>Enter '4' View Remaining Payments!
+2019-10-05 18:09:33 INFO  root:29 - 	>>Enter 'Q' To Exit Back to Main Menu
