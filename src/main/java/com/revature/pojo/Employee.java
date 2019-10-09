@@ -1,6 +1,7 @@
 package com.revature.pojo;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -18,6 +19,7 @@ public class Employee {
 	private String pin;
 	private CarDealershipDAOImpl carDAO = new CarDealershipDAOImpl();
 	private Car car = new Car();
+	private ArrayList<Offer> offerList = null;
 	private Scanner scanner = new Scanner(System.in);
 
 	
@@ -49,7 +51,7 @@ public class Employee {
 		int result = 0;
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
-				info("\tYou have chose to add a car.");
+				info("\tYou have chosen to add a car.");
 				info("\tEnter Car Make");
 				String make = scanner.nextLine();
 				car.setName(make.toLowerCase());
@@ -58,12 +60,24 @@ public class Employee {
 				car.setModel(model.toLowerCase());
 				info("\tEnter model year");
 				String year = scanner.nextLine();
+				if(!Pattern.matches("[0-9]{4}", year)) {
+					info("Enter 4 digits only please");
+					continue;
+				}
 				car.setYear(Integer.parseInt(year));
 				info("\tEnter Car VIN");
 				String vin = scanner.nextLine();
+				if(!Pattern.matches("[0-9a-zA-Z]{17}", vin)) {
+					info("Enter 17 alphanumerical characters only please");
+					continue;
+				}
 				car.setVin(vin.toUpperCase());
 				info("\tEnter Car Price");
 				String price = scanner.nextLine();
+				if(!Pattern.matches("[0-9.]{1,10}", price)) {
+					info("Enter up to 10 digits (decimal included) only please");
+					continue;
+				}
 				car.setPrice(Double.parseDouble(price));
 				car.setRemainingPayment(Double.parseDouble(price));
 				result = carDAO.addCar(car,tableOpt.CAR.levelCode);
@@ -94,6 +108,20 @@ public class Employee {
 		}while(stay);
 	}
 	
+	public boolean viewOfferTable() {
+		offerList = carDAO.getAllOffers();
+		if(offerList == null) {
+			info("No offers posted");
+			return false;
+		}
+		debug("Offer list size: " + offerList.size());
+		int count = 0;
+		for(Offer c: offerList) {
+			info(count +  ". " + c.toString());
+			count++;
+		}
+		return true;
+	}
 	//TODO: ask for VIN and query DB using CarDealershipDAO
 	public int reviewOffer() {
 		boolean stay = true;
@@ -101,32 +129,16 @@ public class Employee {
 		boolean confirmOffer = true;
 		boolean promptForOptionCounter = true;
 		boolean promptForReview = true;
-		
 
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
-				info("\tEnter Car VIN or (#) Quit to Employee Menu");
-				String vin = scanner.nextLine();
-				if(vin.contains("#")) {
-					debug("# detected");
-					stay = false;
-					continue;
-				}
-				vin = vin.toUpperCase();				
-				debug("vin: " + vin);
-				ArrayList<Offer> offerList = carDAO.getOffers( vin );
-				if (offerList == null ) {
-					info("VIN not in our system, try again.");
-					continue;
-				}
-				int optionCounter = 0;
-				for(Offer o: offerList) {
-					info(optionCounter + ". " + o.toString());
-					optionCounter++;
+				promptForOptionCounter = true;
+				if(!viewOfferTable()) {	//if table is empty
+					break;
 				}
 				String choice = null;
 				while(promptForOptionCounter) {
-					info("Enter the option number you'd like to review, or press (#) to try another VIN");
+					info("Enter the option number you'd like to review, or press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("#")) {
 						break;
@@ -137,19 +149,19 @@ public class Employee {
 					}
 				}
 				if(promptForOptionCounter) {	//Retrying VIN option
-					continue;
+					break;
 				}
 				int offerChoice = Integer.parseInt(choice);
 				String currentVIN = offerList.get(offerChoice).getVin();
 				String currentUsername = offerList.get(offerChoice).getCustomerId();
 				double currentAmount = offerList.get(offerChoice).getAmount();
-
 				while(promptForReview) {
 					info(offerList.get(offerChoice).toString());
 					info("Would you like to (A) Accept or (R) Reject this offer? Press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("A") || choice.contains("a")) {
-						carDAO.removeOffer(currentVIN, currentUsername);
+						carDAO.insertPaymentOnAcceptedOffer_SP(currentUsername, currentVIN);//grab data from offers -> payments. 
+						carDAO.removeOffers(currentVIN, null);	//Delete offers with same VIN
 						Car tempCar = carDAO.singleCarFromCarsTable(currentVIN);
 						tempCar.setOwner(currentUsername);
 						tempCar.setRemainingPayment(currentAmount);
@@ -159,10 +171,11 @@ public class Employee {
 						info("The offer was accepted. The vehicle will moved from the lot to the customer's inventory");
 						promptForReview = false;
 					}else if( choice.contains("R") || choice.contains("r")) {
-						carDAO.removeOffer(currentVIN, currentUsername);
+						carDAO.removeOffers(currentVIN, currentUsername);	//deletes a SINGLE offer
 						info("The offer was rejected and removed from our records");						
 						promptForReview = false;
 					}else if(choice.contains("#")){
+						stay = false;
 						break;
 					}else {
 						info("Invalid input. Pick a digit in the range of options");
@@ -255,9 +268,105 @@ public class Employee {
 		info("Showing Cars");
 	}
 	
-	public void viewPayments() {
-		info("Viewing Cars");
+	public double calcMonthlyPayments(double principal, int years, int index) {
+		double result = 0.0;
+		final double SALESMULTIPLIER = 1.06; //FLORIDA
+		final double APR = 0.05;
+		final double monthly_rate = APR / 12.0;
+		double months = years * 12;
+		double init_amount = offerList.get(index).getAmount();
+		init_amount = init_amount * SALESMULTIPLIER;	//FROM HERE WE ADD/DEDUCT NOTHING (ie trade in, rebates, etc.)
+		//loan amortization formula:
+		principal = SALESMULTIPLIER * principal;
 
+		double common = Math.pow((1.0+monthly_rate), months);
+		double numerator = (monthly_rate * common);
+
+		double denominator = common - 1.0;
+
+		result = principal * numerator / denominator;
+		return result;
+	}
+	
+	public boolean viewPaymentTable() {
+		offerList = carDAO.viewAllPayments();
+		if(offerList == null) {
+			info("No payments posted");
+			return false;
+		}
+		debug("Payment list size: " + offerList.size());
+		int count = 0;
+		for(Offer c: offerList) {
+			info(count +  ". " + c.toString());
+			count++;
+		}
+		return true;
+	}
+	public void viewPayments() {
+		boolean stay = true;
+		int result = 0;
+		boolean confirmOffer = true;
+		boolean promptForOptionCounter = true;
+		boolean promptForMonths = true;
+		final int MAXYEARS = 10;
+		do {
+			try {
+				
+				promptForOptionCounter = true;
+				promptForMonths = true;
+				if(!viewPaymentTable()) {	//if table is empty
+					break;
+				}
+				String choice = null;
+				String yearCount = null;
+				while(promptForOptionCounter) {
+					info("Enter the option number you'd like to estimate monthly payments for, or press (#) to quit");
+					choice = scanner.nextLine();
+					if(choice.contains("#")) {
+						break;
+					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < offerList.size()) {
+						promptForOptionCounter = false;
+					}else {
+						info("Invalid input. Pick a digit in the range of options");
+					}
+				}
+				if(promptForOptionCounter) {	//Retrying VIN option
+					break;
+				}
+				int choice_int = Integer.parseInt(choice);
+				while(promptForMonths) {
+					info("Enter the number of years for the loan, or press (#) to quit");
+					yearCount = scanner.nextLine();
+					if(yearCount.contains("#")) {
+						break;
+					}else if( Integer.parseInt(yearCount) > -1 && Integer.parseInt(yearCount) < MAXYEARS) {
+						promptForMonths = false;
+					}else {
+						info("Invalid input. Pick a digit in the 0 to 10");
+					}
+				}
+				if(promptForMonths) {	//Retrying VIN option
+					break;
+				}
+				double monthly =calcMonthlyPayments(offerList.get(choice_int).getAmount(), Integer.parseInt(yearCount), choice_int);
+				DecimalFormat dec = new DecimalFormat("#0.00");
+				debug("Assumptions: 6% sales tax, 5% APR");
+				info("Monthly estimate for your car loan: " + yearCount + " year term: " + dec.format(monthly));
+			}catch(InputMismatchException e) {
+				info("Try Again. Please enter valid the valid data type\n");
+				error(e);
+			}catch(NumberFormatException e){
+				//e.printStackTrace();
+				stay = false;
+				error(e);
+				info("Try Again. Please enter valid the valid data type\n");
+			}
+			catch(Exception e) {
+				debug("Different Error");
+				error(e);
+				stay = false;
+			}
+		}while(stay);
 	}
 	/*
 	public void exit(String v) {

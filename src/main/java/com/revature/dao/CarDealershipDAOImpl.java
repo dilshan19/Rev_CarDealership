@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +46,7 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 				stmt.setDouble(count++, car.getRemainingPayment());
 				debug(stmt.toString());
 				result = stmt.executeUpdate();
+				debug(result + " number of row(s) inserted into cars table");
 				break;
 			case 4:
 				sql = "insert into owners(VIN, username, make,model,model_year, remaining ) values (?,?,?,?,?,?)";
@@ -58,9 +60,10 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 				stmt.setDouble(count++, car.getRemainingPayment());
 				debug(stmt.toString());
 				result = stmt.executeUpdate();
+				debug(result + " number of row(s) inserted into owners table");
 				break;
 			default:
-				debug("Use an apprpriate 2nd arg to addCar()");	
+				error("Use an apprpriate 2nd arg to addCar()");	
 					
 			}
 			
@@ -68,7 +71,7 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 		} catch (SQLException e) {
 			int errorCode = Integer.parseInt(e.getSQLState());
 			debug("State: " + errorCode);
-			e.printStackTrace();
+			//e.printStackTrace();
 			switch(result) {
 			case 23505://vin taken
 				result = 0;
@@ -97,9 +100,11 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 			stmt.setString(count++, offer.getCustomerId());
 			stmt.setDouble(count++, offer.getAmount());
 			result = stmt.executeUpdate();	//should be 1 row updated
+
 		} catch (SQLException e) {
-			int errorCode = Integer.parseInt(e.getSQLState());
-			debug("State: " + errorCode);
+			//int errorCode = Integer.parseInt(e.getSQLState());
+			//debug("State: " + errorCode);
+			error(e);
 			e.printStackTrace();
 			switch(result) {
 			case 23505://PK taken
@@ -405,24 +410,136 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 	}
 
 	@Override
-	public boolean removeOffer(String vin, String username) {
+	public boolean removeOffers(String vin, String username) {
 		
 		int result = 0;
 		try {
-			String sql = "delete from offers where (vin = ? and username = ?)";
-			debug(sql);
-			PreparedStatement stmt = conn.prepareStatement(sql);
-			stmt.setString(1,vin);
-			stmt.setString(2,username);
-			result = stmt.executeUpdate();
+			String sql;
+			if(username==null) {
+				sql = "delete from offers where (vin = ?)";
+				PreparedStatement stmt = conn.prepareStatement(sql);
+				stmt.setString(1,vin);
+				result = stmt.executeUpdate();
+				debug(result + " other offers were rejected");
+			}else {
+				sql = "delete from offers where (vin = ? and username = ?)";
+				PreparedStatement stmt = conn.prepareStatement(sql);
+				stmt.setString(1,vin);
+				stmt.setString(2,username);
+				result = stmt.executeUpdate();
+				info(result + " other offer(s) were rejected");
+			}
+
 		} catch (SQLException e) {
 			int errorCode = Integer.parseInt(e.getSQLState());
 			debug("State: " + errorCode);
 			e.printStackTrace();
 		}	
-		return result==1;
+		return result != 0;
+	}
+
+	@Override
+	public boolean getRemainingPayment(String username, String vin) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ArrayList<Offer> getAllOffers() {
+		
+		ArrayList<Offer> offerList = new ArrayList<Offer>();
+		
+		String sql = "Select * from offers";
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet r = stmt.executeQuery(sql);
+			Offer tempOffer = new Offer();
+			while(r.next() != false) {
+				tempOffer = new Offer();
+				tempOffer.setVin(r.getString(2));
+				tempOffer.setCustomerId(r.getString(3));				
+				tempOffer.setAmount(Double.parseDouble(r.getString(4)));
+				offerList.add(tempOffer);
+			}
+			debug("Total offers pulled: " + offerList.size());
+			r.close();
+		}catch(SQLException e) {
+			debug("State: " + e.getSQLState());
+			e.printStackTrace();
+		}		
+		return ( offerList.size() != 0 ) ? offerList : null;
 	}
 	
+	@Override
+	public boolean insertPaymentOnAcceptedOffer_SP(String username, String vin) {
+		boolean check = false;
+		int result = 0;
+		try {
+			ResultSet resultSet = null;
+			conn.setAutoCommit(false);
+			//String sql = "{call insert_to_payments(?)}";
+			PreparedStatement call = conn.prepareCall("call insert_to_payments(?, ?, ?)");
+			//CallableStatement call = conn.prepareCall(sql);
+			//call.setDouble(1, 3.00);
+			call.setString(1, username);
+			call.setString(2, vin);
+			call.setObject(3, resultSet, Types.OTHER);
+			//call.registerOutParameter(2, Types.OTHER);
+			ResultSet ret = call.executeQuery();
+			ret.next();
+			resultSet = (ResultSet) ret.getObject(1);			
+			//resultSet = (ResultSet) call.getObject(2);
+			resultSet.next();		//SHOULD return only 1 value
+			Double temp = resultSet.getDouble(3);
+			debug("Accepted amount: " + temp);
+			conn.setAutoCommit(true);
+
+			String sql;
+			PreparedStatement stmt;
+			int count = 1;			
+			sql = "insert into payments ( VIN, username, payment) values (?,?,?)";
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(count++, vin);
+			stmt.setString(count++, username);
+			stmt.setDouble(count++, temp);
+			debug(stmt.toString());
+			result = stmt.executeUpdate();
+			debug("Rows updated in payments table: " + result);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return check;
+	}
+
+	@Override
+	public ArrayList<Offer> viewAllPayments() {
+		
+		ArrayList<Offer> offerList = new ArrayList<Offer>();
+		
+		String sql = "Select * from payments";
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet r = stmt.executeQuery(sql);
+			Offer tempOffer = new Offer();
+			while(r.next() != false) {
+				tempOffer = new Offer();
+				tempOffer.setVin(r.getString(2));
+				tempOffer.setCustomerId(r.getString(3));				
+				tempOffer.setAmount(Double.parseDouble(r.getString(4)));
+				offerList.add(tempOffer);
+			}
+			r.close();
+		}catch(SQLException e) {
+			debug("State: " + e.getSQLState());
+			e.printStackTrace();
+		}		
+		return ( offerList.size() != 0 ) ? offerList : null;		
+	}
+
 	
 
 }

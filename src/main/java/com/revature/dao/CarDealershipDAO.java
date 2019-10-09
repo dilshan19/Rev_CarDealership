@@ -13,7 +13,7 @@ public interface CarDealershipDAO {
 	public  ArrayList<Offer> getOffers(String vin);
 	public int putOffer(Offer offer);
 	public boolean removeCar(String id);
-	public boolean removeOffer(String vin, String username);
+	public boolean removeOffers(String vin, String username);
 
 	public int updateOffer(Offer offer);
 	public boolean checkIfCarInLot(String vin);
@@ -23,5 +23,8 @@ public interface CarDealershipDAO {
 	public Car singleCarFromCarsTable(String VIN);
 	public boolean updateRemainingPayment(String VIN, double amount);
 	public boolean isDuplicateString(String string, int field);
-	
+	public boolean getRemainingPayment(String username, String vin);
+	public ArrayList<Offer> getAllOffers();
+	public boolean insertPaymentOnAcceptedOffer_SP(String username, String vin);
+	public ArrayList<Offer> viewAllPayments();
 }

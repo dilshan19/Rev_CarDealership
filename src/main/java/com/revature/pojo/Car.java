@@ -127,7 +127,7 @@ public class Car {
 	@Override
 	public String toString() {
 		return "Car [name=" + name + ", model=" + model + ", year=" + year + ", price=" + price + ", vin=" + vin
-				+ ", remainingPayment=" + remainingPayment + ", owner=" + owner + "]";
+				+ ", remainingPayment=" + remainingPayment + "]";
 	}
 	
 

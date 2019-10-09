@@ -20,7 +20,7 @@ public class Offer {
 	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 	public String getCustomerId() {
@@ -80,7 +80,7 @@ public class Offer {
 	}
 	@Override
 	public String toString() {
-		return "Offer [amount=" + amount + ", customerId=" + customerId + ", vin=" + vin + ", status=" + status + "]";
+		return "Offer [amount= " + amount + ", customerId= " + customerId + ", vin= " + vin + "]";
 	}	
 	
 }

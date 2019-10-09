@@ -5,12 +5,14 @@ import java.util.regex.Pattern;
 import static com.revature.util.LoggerUtil.error;
 import static com.revature.util.LoggerUtil.info;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.revature.dao.CarDealershipDAOImpl;
 import com.revature.main.CarDealershipDriver;
+import com.revature.users.UserInterface.tableOpt;
 
 public class Customer {
 	
@@ -68,43 +70,43 @@ public class Customer {
 	//Menu Options
 	public Offer makeOffer() {
 		boolean stay = true;
-		boolean askVin = true;
+		boolean promptForOptionCounter = true;
 		boolean promptOffer = true;
-		int result = 0;
 		Offer offerMade = null;
 		Car singleCar = null;
-		String vin = null;
 		
 		do {
 			try {
-				askVin = true;
 				promptOffer = true;
-				while(askVin) {
-					info("What is the Car VIN? Press '#' to return to the Customer Menu");
-					vin = scanner.nextLine();
-					if(vin.contains("#")) {
-						askVin = false;
-						stay = false;
-						continue;
-					}else if(Pattern.matches("[a-zA-Z0-9]{17}", vin)) {
-						askVin = false;
+				promptForOptionCounter = true;
+				if(!viewAllCars()) {
+					break;
+				}
+				String choice = null;
+				while(promptForOptionCounter) {
+					info("Enter the option number you'd like to review, or press (#) to quit");
+					choice = scanner.nextLine();
+					if(choice.contains("#")) {
+						break;
+					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < cars.size()) {
+						promptForOptionCounter = false;
 					}else {
-						info("Enter the 17 alphanumeric characters located on the windshield");
+						info("Invalid input. Pick a digit in the range of options");
 					}
 				}
-				if(!stay) {
-					continue;
+				if(promptForOptionCounter) {	//Retrying VIN option
+					break;
 				}
-				vin = vin.toUpperCase();
-				singleCar = carDAO.singleCarFromCarsTable(vin);
+				int offerChoice = Integer.parseInt(choice);
+				singleCar = carDAO.singleCarFromCarsTable(cars.get(offerChoice).getVin());
 				if(  singleCar != null ) {
 					info( "DETAILS: " + singleCar.toString() );
 				}else {
-					info("No car found with this VIN. Try again.");
+					info("No car details found in database");
 					continue;
 				}
 				while(promptOffer) {
-					info("Would you like to make an offer for this vehicle? Press (Y) Yes or (N) No to search another VIN");
+					info("Would you like to make an offer for this vehicle? Press (Y) Yes or (N) No to search another vehicle");
 					String resp = scanner.nextLine();
 					if(resp.contains("Y") || resp.contains("y") ) {
 						promptOffer = false;
@@ -126,21 +128,23 @@ public class Customer {
 					if(amount.contains("#")) {
 						break;
 					}
-					else if(Pattern.matches("[0-9]{1,8}", amount)) {	//Play safe -> 9 digits can overflow INT
+					else if(Pattern.matches("[0-9.]{1,10}", amount) && Double.parseDouble(amount) > 0.0) {	//Play safe -> 9 digits can overflow INT
 						promptOffer = false;
 					}else {
-						info("Enter up to 8 digits only!");
+						info("Enter a positive 10 digit number only!");
 					}
 				}
 				if(promptOffer) {	//contained #
 					continue;
 				}
+				String vin = cars.get(offerChoice).getVin();
 				offerMade = new Offer();
 				offerMade.setVin(vin);
 				offerMade.setCustomerId(this.userName);
-				offerMade.setAmount(Integer.parseInt(amount));
+				offerMade.setAmount(Double.parseDouble(amount));
+
 				info(offerMade.toString()) ;
-				result = carDAO.putOffer( offerMade);
+				int result = carDAO.putOffer( offerMade);
 				switch (result) {
 				case 0:
 					info("There was an unexpected error in our system. Please try again.");
@@ -159,6 +163,7 @@ public class Customer {
 				error(e);
 			}catch(NumberFormatException e){
 				error(e);
+				e.printStackTrace();
 				info("\tTry Again. Please enter valid the valid data type\n");
 			}
 			catch(Exception e) {
@@ -169,35 +174,86 @@ public class Customer {
 		}while(stay == true);
 		return offerMade;
 	}
-	public void viewAllCars() {
-		debug("Pulling all cars (result set -> to arrayList of cars");
+	public boolean viewAllCars() {
 		cars = carDAO.getEntireCarList();
 		if(cars == null) {
-			info("No cars owned");
-			return;
+			info("No cars in the lot");
+			return false;
 		}
 		debug("Car list size: " + cars.size());
+		int count = 0;
 		for(Car c: cars) {
-			info(c.toString());
+			info(count +  ". " + c.toString());
+			count++;
 		}
+		return true;
 	}
-	public void viewOwnedCars() {
-		debug("Pulling owner's cars (result set -> to arrayList of cars");
+	public boolean viewOwnedCars() {
 		cars = carDAO.getOwnersCarList(userName);	
 		if(cars == null) {
 			info("No cars owned");
-			return;
+			return false;
 		}
+		int count = 0;
 		for(Car c: cars) {
-			info(c.toString());
+			info(count +  ". " + c.toString());
+			count++;
 		}
+		return true;
 	}
 	public void viewRemainingPayments() {
-		info("Ask for Car VIN and Pull some info and make calculations based off info");
+		boolean stay = true;
+		boolean promptForOptionCounter = true;
+		double remaining = 0.0;
+		do {
+			try {
+				promptForOptionCounter = true;
+				if(!viewOwnedCars()) {
+					break;
+				}
+				String choice = null;
+				while(promptForOptionCounter) {
+					info("Enter the option number you'd like to examine, or press (#) to quit");
+					choice = scanner.nextLine();
+					if(choice.contains("#")) {
+						break;
+					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < cars.size()) {
+						promptForOptionCounter = false;
+					}else {
+						info("Invalid input. Pick a digit in the range of options");
+					}
+				}
+				if(promptForOptionCounter) {	//Retrying VIN option
+					break;
+				}
+				int offerChoice = Integer.parseInt(choice);
+				remaining = cars.get(offerChoice).getRemainingPayment();
+				String carName = cars.get(offerChoice).getName();
+				String carModel = cars.get(offerChoice).getModel();
+				DecimalFormat dec = new DecimalFormat("#0.00");
+				info("You owe: " + dec.format(remaining) + " on the " + carName + " " + carModel);
+			}catch(InputMismatchException e) {
+				info("Try Again. Please enter valid the valid data type\n");
+				stay = false;
+				error(e);
+			}catch(NumberFormatException e){
+				e.printStackTrace();
+				error(e);
+				info("Try Again. Please enter valid the valid data type\n");
+				stay = false;
+			}
+			catch(Exception e) {
+				debug("Different Error");
+				error(e);
+				stay = false;
+			}			
+
+		}while(stay == true);
+	
+		
 	}
 	//Menu Interface
 	public void customerOptions() {		
-		debug("Logging in....");
 		boolean stay = true;
 		do {
 			try {
