@@ -139,7 +139,6 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 	public boolean saveCustomer(Customer c) {
 		// TODO Auto-generated method stub
 		int result = 0;
-		boolean success = false;
 		try {
 			String sql = "insert into users (username, first_name, last_name, pin) values (?,?,?,?)";
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -150,7 +149,6 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 			stmt.setString(count++, c.getPin());
 			debug(stmt.toString());
 			result = stmt.executeUpdate();
-			success = true;
 		} catch (SQLException e) {
 			int errorCode = Integer.parseInt(e.getSQLState());
 			debug("State: " + errorCode);
@@ -164,7 +162,7 @@ public class CarDealershipDAOImpl implements CarDealershipDAO{
 				result = 2;			
 			}
 		}	
-		return success;
+		return result !=0;
 	}
 
 	@Override

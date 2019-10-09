@@ -51,31 +51,31 @@ public class Employee {
 		int result = 0;
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
-				info("\tYou have chosen to add a car.");
-				info("\tEnter Car Make");
+				info("\n\t>>You have chosen to add a car.");
+				info("\n\t>>Enter Car Make");
 				String make = scanner.nextLine();
 				car.setName(make.toLowerCase());
-				info("\tEnter Car Model");
+				info("\n\t>>Enter Car Model");
 				String model = scanner.nextLine();
 				car.setModel(model.toLowerCase());
-				info("\tEnter model year");
+				info("\n\t>>Enter model year");
 				String year = scanner.nextLine();
 				if(!Pattern.matches("[0-9]{4}", year)) {
-					info("Enter 4 digits only please");
+					info("\n\t>>Enter 4 digits only please");
 					continue;
 				}
 				car.setYear(Integer.parseInt(year));
-				info("\tEnter Car VIN");
+				info("\n\t>>Enter Car VIN");
 				String vin = scanner.nextLine();
 				if(!Pattern.matches("[0-9a-zA-Z]{17}", vin)) {
-					info("Enter 17 alphanumerical characters only please");
+					info("\n\t>>Enter 17 alphanumerical characters only please");
 					continue;
 				}
 				car.setVin(vin.toUpperCase());
-				info("\tEnter Car Price");
+				info("\n\t>>Enter Car Price");
 				String price = scanner.nextLine();
 				if(!Pattern.matches("[0-9.]{1,10}", price)) {
-					info("Enter up to 10 digits (decimal included) only please");
+					info("\n\t>>Enter up to 10 digits (decimal included) only please");
 					continue;
 				}
 				car.setPrice(Double.parseDouble(price));
@@ -83,22 +83,22 @@ public class Employee {
 				result = carDAO.addCar(car,tableOpt.CAR.levelCode);
 				switch(result) {
 				case 0:
-					info("This VIN has already been registered");break;
+					info("\n\t>>This VIN has already been registered");break;
 				case 1:
 					stay = false;
 					info(car.toString());
-					info("\tThe car was successfully added to the Lot:");
+					info("\n\t>>The car was successfully added to the Lot:");
 					stay = false;break;
 				case 2:
-					info("Database error. Please contact system admin.");break;
+					info("\n\t>>Database error. Please contact system admin.");break;
 				default: 
-					info("Unhandled database error. Please contact system admin.");
+					info("\n\t>>Unhandled database error. Please contact system admin.");
 				}
 			}catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type");
+				info("\n\t>>Try Again. Please enter valid the valid data type");
 				error(e);
 			}catch(NumberFormatException e) {
-				info("Try Again. Please enter valid the valid data type");
+				info("\n\t>>Try Again. Please enter valid the valid data type");
 				error(e);
 			}			
 			catch(Exception e) {
@@ -111,7 +111,7 @@ public class Employee {
 	public boolean viewOfferTable() {
 		offerList = carDAO.getAllOffers();
 		if(offerList == null) {
-			info("No offers posted");
+			info("\n\t>>No offers posted");
 			return false;
 		}
 		debug("Offer list size: " + offerList.size());
@@ -126,26 +126,26 @@ public class Employee {
 	public int reviewOffer() {
 		boolean stay = true;
 		int result = 0;
-		boolean confirmOffer = true;
 		boolean promptForOptionCounter = true;
 		boolean promptForReview = true;
 
 		do {	//TODO: fix structure, fix SCANNERS
 			try {
 				promptForOptionCounter = true;
+				promptForReview = true;
 				if(!viewOfferTable()) {	//if table is empty
 					break;
 				}
 				String choice = null;
 				while(promptForOptionCounter) {
-					info("Enter the option number you'd like to review, or press (#) to quit");
+					info("\n\t>>Enter the option number you'd like to review, or press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("#")) {
 						break;
 					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < offerList.size()) {
 						promptForOptionCounter = false;
 					}else {
-						info("Invalid input. Pick a digit in the range of options");
+						info("\n\t>>Invalid input. Pick a digit in the range of options");
 					}
 				}
 				if(promptForOptionCounter) {	//Retrying VIN option
@@ -157,7 +157,7 @@ public class Employee {
 				double currentAmount = offerList.get(offerChoice).getAmount();
 				while(promptForReview) {
 					info(offerList.get(offerChoice).toString());
-					info("Would you like to (A) Accept or (R) Reject this offer? Press (#) to quit");
+					info("\n\t>>Would you like to (A) Accept or (R) Reject this offer? Press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("A") || choice.contains("a")) {
 						carDAO.insertPaymentOnAcceptedOffer_SP(currentUsername, currentVIN);//grab data from offers -> payments. 
@@ -168,11 +168,11 @@ public class Employee {
 						info(tempCar.toString());
 						carDAO.addCar(tempCar, tableOpt.OWNERS.levelCode);	//addCar to owned table
 						carDAO.removeCar(currentVIN);
-						info("The offer was accepted. The vehicle will moved from the lot to the customer's inventory");
+						info("\n\t>>The offer was accepted. The vehicle will moved from the lot to the customer's inventory\n");
 						promptForReview = false;
 					}else if( choice.contains("R") || choice.contains("r")) {
 						carDAO.removeOffers(currentVIN, currentUsername);	//deletes a SINGLE offer
-						info("The offer was rejected and removed from our records");						
+						info("\n\t>>The offer was rejected and removed from our records");						
 						promptForReview = false;
 					}else if(choice.contains("#")){
 						stay = false;
@@ -229,30 +229,30 @@ public class Employee {
 				if(promptForOption1) {break;}//quit to main
 				
 				while(promptForVIN) {
-					info("\tEnter the Car VIN or (#) to quit");
+					info("\n\t>>Enter the Car VIN or (#) to quit");
 					String vin = scanner.nextLine();
 					if(vin.contains("#")) {
 						return;
 					}else if(!Pattern.matches("[a-zA-Z0-9]{17}", vin)) {
-						info("Enter a 17 digit alphanumeric number please");
+						info("\n\t>>Enter a 17 digit alphanumeric number please");
 						continue;
 					}
 					result = carDAO.removeCar(vin); 
 					if(result) {
-						info("The car has been removed from the lot");
+						info("\n\t>>The car has been removed from the lot");
 						promptForVIN = false;
 					}else {
-						info("The car does not exist in our records. Try again");
+						info("\n\t>>The car does not exist in our records. Try a different VIN");
 					}
 				}
 	
 			}catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 				stay = false;
 				error(e);
 			}catch(NumberFormatException e){
 				error(e);
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 				stay = false;
 			}
 			catch(Exception e) {
@@ -268,14 +268,13 @@ public class Employee {
 		info("Showing Cars");
 	}
 	
-	public double calcMonthlyPayments(double principal, int years, int index) {
+	public double calcMonthlyPayments(double principal, int years) {
 		double result = 0.0;
 		final double SALESMULTIPLIER = 1.06; //FLORIDA
 		final double APR = 0.05;
 		final double monthly_rate = APR / 12.0;
 		double months = years * 12;
-		double init_amount = offerList.get(index).getAmount();
-		init_amount = init_amount * SALESMULTIPLIER;	//FROM HERE WE ADD/DEDUCT NOTHING (ie trade in, rebates, etc.)
+		//FROM HERE WE ADD/DEDUCT NOTHING (ie trade in, rebates, etc.)
 		//loan amortization formula:
 		principal = SALESMULTIPLIER * principal;
 
@@ -320,14 +319,14 @@ public class Employee {
 				String choice = null;
 				String yearCount = null;
 				while(promptForOptionCounter) {
-					info("Enter the option number you'd like to estimate monthly payments for, or press (#) to quit");
+					info("\n\t>>Enter the option number you'd like to estimate monthly payments for, or press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("#")) {
 						break;
 					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < offerList.size()) {
 						promptForOptionCounter = false;
 					}else {
-						info("Invalid input. Pick a digit in the range of options");
+						info("\n\t>>Invalid input. Pick a digit in the range of options");
 					}
 				}
 				if(promptForOptionCounter) {	//Retrying VIN option
@@ -335,23 +334,23 @@ public class Employee {
 				}
 				int choice_int = Integer.parseInt(choice);
 				while(promptForMonths) {
-					info("Enter the number of years for the loan, or press (#) to quit");
+					info("\n\t>>Enter the number of years for the loan, or press (#) to quit");
 					yearCount = scanner.nextLine();
 					if(yearCount.contains("#")) {
 						break;
-					}else if( Integer.parseInt(yearCount) > -1 && Integer.parseInt(yearCount) < MAXYEARS) {
+					}else if( Integer.parseInt(yearCount) > -1 && Integer.parseInt(yearCount) <= MAXYEARS) {
 						promptForMonths = false;
 					}else {
-						info("Invalid input. Pick a digit in the 0 to 10");
+						info("\n\t>>Invalid input. Pick a digit in the 0 to 10");
 					}
 				}
 				if(promptForMonths) {	//Retrying VIN option
 					break;
 				}
-				double monthly =calcMonthlyPayments(offerList.get(choice_int).getAmount(), Integer.parseInt(yearCount), choice_int);
+				double monthly =calcMonthlyPayments(offerList.get(choice_int).getAmount(), Integer.parseInt(yearCount));
 				DecimalFormat dec = new DecimalFormat("#0.00");
 				debug("Assumptions: 6% sales tax, 5% APR");
-				info("Monthly estimate for your car loan: " + yearCount + " year term: " + dec.format(monthly));
+				info("\t>>Monthly estimate for your car loan: " + yearCount + " year term: " + dec.format(monthly)+"\n");
 			}catch(InputMismatchException e) {
 				info("Try Again. Please enter valid the valid data type\n");
 				error(e);
@@ -359,7 +358,7 @@ public class Employee {
 				//e.printStackTrace();
 				stay = false;
 				error(e);
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 			}
 			catch(Exception e) {
 				debug("Different Error");
@@ -391,7 +390,7 @@ public class Employee {
 		final String samplePin = "1234";
 
 		do {				
-			info("\tWelcome to the Employee Menu " + getUsername());
+			info("\tWelcome to the Employee Menu, " + getUsername());
 			info("\t>>Enter '1' Add A Car to The Lot!");
 			info("\t>>Enter '2' Accept or reject an offer!");
 			info("\t>>Enter '3' View Payments!");

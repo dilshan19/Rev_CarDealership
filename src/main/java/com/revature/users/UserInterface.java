@@ -54,12 +54,12 @@ public class UserInterface implements UserOpts{
 			try {
 				promptForUsername = true;
 				while(promptForUsername) {
-					info("\n\t>>Enter your username or (#) to quit!\n");
+					info("\n\t>>Enter your username or (#) to quit!");
 					userName = scanner.nextLine();
 					if(userName.contains("#")){
 						break;
 					}else if(!UI_carDAO.isDuplicateString(userName, tableOpt.USER.levelCode)){	//if not in database
-						info("That username is not in our database! Try again.");
+						info("\n\t>>That username is not in our database! Try again.\n");
 					}else {
 						promptForUsername = false;
 					}
@@ -74,8 +74,8 @@ public class UserInterface implements UserOpts{
 					stay = false;
 					validLogin = true;
 				}else {
-					info("Wrong Combination.");
-					info("Press (#) For Main Menu Or Enter Any Other Key To Retry");
+					info("\n\t>>Wrong Combination.");
+					info("\n\t>>Press (#) For Main Menu Or Enter Any Other Key To Retry");
 					String returnToMain = scanner.nextLine();
 					if(returnToMain.contains("#") ) {
 						stay = false;
@@ -84,11 +84,11 @@ public class UserInterface implements UserOpts{
 				}
 			}
 			catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type");
 				error(e);
 			}catch(NumberFormatException e){
 				error(e);
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type");
 			}
 			catch(Exception e) {
 				debug("Different Error");
@@ -121,30 +121,30 @@ public class UserInterface implements UserOpts{
 				promptForPIN = true;
 				validRegister = false;
 				try {
-					info("Enter '#' to exit now, or press any other key to continue registering");
+					info("\n\t>>Enter '#' to exit now, or press any other key to continue registering");
 					String cont = scanner.nextLine(); 
 					if(cont.contains("#")) {
 						stay = false;continue;
 					}
-					info("\n\t>>Enter Your First Name!\n");
+					info("\n\t>>Enter Your First Name!");
 					String name = scanner.nextLine();
 					if(Pattern.matches("[a-zA-Z0-9]{1,16}", name)) {
-						info("\n\t>>Enter Your Last Name!\n");
+						info("\n\t>>Enter Your Last Name!");
 						String lname = scanner.nextLine();
 						if(Pattern.matches("[a-zA-Z0-9]{1,16}", lname)) {
 							while(promptForUsername) {
-								info("\n\t>>Enter a Username or Press '#' to Start Over!\n");
+								info("\n\t>>Enter a Username or Press '#' to Start Over!");
 								String username = scanner.nextLine();
 								if(Pattern.matches("[a-zA-Z0-9]{6,18}", username)) {
 									info("You've entered: " + username);
 									if(!UI_carDAO.isDuplicateString(username, tableOpt.USER.levelCode)) {
 										promptForUsername = false;
 									}else {
-										info("This username has been taken. Try another!");
+										info("\n\t>>This username has been taken. Try another!");
 										continue;
 									}
 									while(promptForPIN) {
-										info("\n\t>>Enter a 4 Digit Pin or Press (Q) to Start Over!\n");
+										info("\n\t>>Enter a 4 Digit Pin or Press (Q) to Start Over!");
 										String pin = scanner.nextLine();
 										if(Pattern.matches("^[0-9]{4}$", pin)){	//TODO: change to a loop
 											customer1.setFirstName(name);
@@ -152,7 +152,7 @@ public class UserInterface implements UserOpts{
 											customer1.setUserName(username);
 											customer1.setPin(pin);
 											if(!UI_carDAO.saveCustomer(customer1)) {
-												info("Database could not process your information. Please try again.");
+												info("\n\t>>Database could not process your information. Please try again.");
 												return;
 											}
 											validRegister = true;
@@ -164,23 +164,23 @@ public class UserInterface implements UserOpts{
 											break;
 										}
 										else{
-											info("\n\tInvalid Input! Try Again!\n");
+											info("\n\t>>Invalid Input! Try Again!");
 										}
 									}
 								}else if(username.contains("#")){
-									info("Starting over");
+									info("\nStarting over\n");
 									break;
 								}
 								else{
-									info("Username must have 6-18 Alphanumeric characters");
+									info("\n\t>>Username must have 6-18 Alphanumeric characters");
 								}
 							}
 						}else {
-							info("\n\tInvalid Last Name!\n");
+							info("\n\t>>Invalid Last Name!");
 						}
 						
 					}else {
-						info("\n\tInvalid Input!\n");
+						info("\n\t>>Invalid Input!");
 					}					
 				}
 				catch(Exception e) {
@@ -190,7 +190,7 @@ public class UserInterface implements UserOpts{
 				}
 			}while(stay);
 			if(validRegister) {
-				info("Account created.");
+				info("\n\t>>Account created!");
 				login();
 			}
 		}

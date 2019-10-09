@@ -126,8 +126,8 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [name=" + name + ", model=" + model + ", year=" + year + ", price=" + price + ", vin=" + vin
-				+ ", remainingPayment=" + remainingPayment + "]";
+		return "Car [name= " + name.toUpperCase() + ", model= " + model.toUpperCase() + ", year= " + year + ", price= " + price + ", vin= " + vin
+				+ ", remainingPayment= " + remainingPayment + "]\n";
 	}
 	
 

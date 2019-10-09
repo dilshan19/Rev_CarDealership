@@ -35,7 +35,7 @@ public class CarDealershipDAOTest {
 	private CarDealershipDAOImpl carDAO = new CarDealershipDAOImpl();
 	Employee employee = new Employee();
 	private Car testCar = new Car();
-	private Customer testCust = new Customer();
+	private Customer testCust;
 	
 	public CarDealershipDAOTest() throws SQLException {
 		super();
@@ -60,11 +60,13 @@ public class CarDealershipDAOTest {
 	public void setUp() throws Exception {
 		
 		
+		
 		/*
 		 * when(conn.prepareStatement(Matchers.anyString())).thenReturn(
 		 * mockPreparedStmnt); testCar = new Car(); testCust = new Customer();
 		 * carDAO.setConn(conn);
 		 */
+		 
 	}
 
 	@After
@@ -82,12 +84,9 @@ public class CarDealershipDAOTest {
 	}
 
 	@Test
-	public void testDuplicateStringMethod() {	// test that the specific string is within a table specified by 2nd arg
-		assertEquals(true, carDAO.isDuplicateString("Momo3",1));
+	public void testDuplicateStringMethod() {	// must turn off the setup functions for this to pass...
 		assertEquals(true, carDAO.isDuplicateString("JYAVG04E38A012345",1));
-		assertEquals(false, carDAO.isDuplicateString("KYAVG04E38A012345",1));
-
-		
+		assertEquals(false, carDAO.isDuplicateString("JYAVG04E38A012346",1));
 	}
 	
 	@Test
@@ -124,17 +123,16 @@ public class CarDealershipDAOTest {
 		assertEquals(true, carDAO.isDuplicateString("GReyes1", 0));
 		assertEquals(true, carDAO.isDuplicateString("GReyes2", 0));
 		assertEquals(false, carDAO.isDuplicateString("GReyes3", 0));
-
 		assertEquals(true, carDAO.isDuplicateString("JYAVG04E38A012345", 1));
 
 	}
 	
 	@Test
 	public void testSavingCustomerFunc() {
-		testCust.setFirstName("Gerard");
+		testCust.setUserName("Gerardo");
 		testCust.setFirstName("Reyes");
-		testCust.setFirstName("GReyes1");
-		testCust.setFirstName("1111");
+		testCust.setLastName("GReyes1");
+		testCust.setPin("1111");
 
 		assertEquals(true, carDAO.saveCustomer(testCust)); //manually check DB...
 		try {
@@ -147,7 +145,7 @@ public class CarDealershipDAOTest {
 	
 	@Test	
 	public void testTwoStringMatchingFunc() {
-		assertEquals(true, carDAO.checkForTwoMatchingStrings("GReyes1", "1111", 2)); 
+		assertEquals(true, carDAO.checkForTwoMatchingStrings("GReyes1", "1111", 2)); //check that these strings are in the table 2 (Users -> check enum)
 		assertEquals(false, carDAO.checkForTwoMatchingStrings("GReyes2", "1111", 2)); 		
 		assertEquals(false, carDAO.checkForTwoMatchingStrings("GReyes1", "11112", 2)); 		
 	}
@@ -157,6 +155,18 @@ public class CarDealershipDAOTest {
 		ArrayList<Car> tempList = new ArrayList<Car>();
 		//assertEquals(true, carDAO.getEntireCarList()); 
 	
+	}
+	
+	@Test	
+	public void testCalculateMonthlyPayment() {
+		
+		double principal = 37999.0;
+		int years = 6;
+		
+		Double result = employee.calcMonthlyPayments(principal, years);
+		assertEquals( true , Math.round(result) == 649);
+		assertEquals( false , Math.round(result) == 650);
+
 	}
 	
 

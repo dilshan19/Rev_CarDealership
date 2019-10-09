@@ -27,12 +27,12 @@ public class CarDealershipDriver {
 			boolean keepPrompting = true;
 
 			while(keepPrompting) {
-				info("\t\t\t\t /////////////////////////////////// ");
-				info("\t\t\t\t/                                   /");
-				info("\t\t\t\t/          Welcome To RevCar        /");
-				info("\t\t\t\t/                                   /");
-				info("\t\t\t\t ///////////////////////////////////");
-				info("\tCustomer: Register (R)\t: Login (L)\tTerminate Program: (T) ");
+				info("\t\t\t /////////////////////////////////// ");
+				info("\t\t\t/                                   /");
+				info("\t\t\t/          Welcome To RevCar        /");
+				info("\t\t\t/                                   /");
+				info("\t\t\t ///////////////////////////////////");
+				info("\tCustomer: Register(R)\t: Login (L)\tTerminate Program: (T) ");
 				String choice = scanner.nextLine();
 				debug("User input was: " + choice);
 				if(choice.contains("R") || choice.contains("r")) {

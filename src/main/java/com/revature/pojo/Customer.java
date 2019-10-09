@@ -84,14 +84,14 @@ public class Customer {
 				}
 				String choice = null;
 				while(promptForOptionCounter) {
-					info("Enter the option number you'd like to review, or press (#) to quit");
+					info("\n\t>>Enter the option number you'd like to review, or press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("#")) {
 						break;
 					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < cars.size()) {
 						promptForOptionCounter = false;
 					}else {
-						info("Invalid input. Pick a digit in the range of options");
+						info("\n\t>>Invalid input. Pick a digit in the range of options");
 					}
 				}
 				if(promptForOptionCounter) {	//Retrying VIN option
@@ -100,13 +100,13 @@ public class Customer {
 				int offerChoice = Integer.parseInt(choice);
 				singleCar = carDAO.singleCarFromCarsTable(cars.get(offerChoice).getVin());
 				if(  singleCar != null ) {
-					info( "DETAILS: " + singleCar.toString() );
+					info( "\n\t>>DETAILS: " + singleCar.toString() );
 				}else {
-					info("No car details found in database");
+					info("\n\t>>No car details found in database");
 					continue;
 				}
 				while(promptOffer) {
-					info("Would you like to make an offer for this vehicle? Press (Y) Yes or (N) No to search another vehicle");
+					info("\n\t>>Would you like to make an offer for this vehicle? Press (Y) Yes or (N) No to search another vehicle");
 					String resp = scanner.nextLine();
 					if(resp.contains("Y") || resp.contains("y") ) {
 						promptOffer = false;
@@ -114,7 +114,7 @@ public class Customer {
 					}else if( resp.contains("N") || resp.contains("n") ) {
 						break;
 					}else {
-						info("Enter one of the two options!");
+						info("\n\t>>Enter one of the two options!");
 					}
 				}
 				if(promptOffer) {	//retry lookup (Pressed N)
@@ -123,7 +123,7 @@ public class Customer {
 				promptOffer = true;//reuse
 				String amount = null;
 				while(promptOffer) {
-					info("How much would you like to offer? Press (#) to start over");
+					info("\n\t>>How much would you like to offer? Press (#) to start over");
 					amount = scanner.nextLine();
 					if(amount.contains("#")) {
 						break;
@@ -131,7 +131,7 @@ public class Customer {
 					else if(Pattern.matches("[0-9.]{1,10}", amount) && Double.parseDouble(amount) > 0.0) {	//Play safe -> 9 digits can overflow INT
 						promptOffer = false;
 					}else {
-						info("Enter a positive 10 digit number only!");
+						info("\n\t>>Enter a positive 10 digit number only!");
 					}
 				}
 				if(promptOffer) {	//contained #
@@ -147,24 +147,24 @@ public class Customer {
 				int result = carDAO.putOffer( offerMade);
 				switch (result) {
 				case 0:
-					info("There was an unexpected error in our system. Please try again.");
+					info("\n\t>>There was an unexpected error in our system. Please try again.");
 					stay = false;
 					break;
 				case 1:
-					info("You've updated your offer for VIN: " + vin);
+					info("\n\t>>You've updated your offer for VIN: " + vin);
 					stay = false;
 					break;
 				default:
-					info("\tThere was an unexpected error in our system. Please try again.");
+					info("\n\t>>There was an unexpected error in our system. Please try again.");
 					break;
 				}
 			}catch(InputMismatchException e) {
-				info("\tTry Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 				error(e);
 			}catch(NumberFormatException e){
 				error(e);
 				e.printStackTrace();
-				info("\tTry Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 			}
 			catch(Exception e) {
 				debug("Different Error");
@@ -177,7 +177,7 @@ public class Customer {
 	public boolean viewAllCars() {
 		cars = carDAO.getEntireCarList();
 		if(cars == null) {
-			info("No cars in the lot");
+			info("\n\t>>No cars in the lot");
 			return false;
 		}
 		debug("Car list size: " + cars.size());
@@ -191,7 +191,7 @@ public class Customer {
 	public boolean viewOwnedCars() {
 		cars = carDAO.getOwnersCarList(userName);	
 		if(cars == null) {
-			info("No cars owned");
+			info("\n\t>>No cars owned");
 			return false;
 		}
 		int count = 0;
@@ -213,14 +213,14 @@ public class Customer {
 				}
 				String choice = null;
 				while(promptForOptionCounter) {
-					info("Enter the option number you'd like to examine, or press (#) to quit");
+					info("\n\t>>Enter the option number you'd like to examine, or press (#) to quit");
 					choice = scanner.nextLine();
 					if(choice.contains("#")) {
 						break;
 					}else if( Integer.parseInt(choice) > -1 && Integer.parseInt(choice) < cars.size()) {
 						promptForOptionCounter = false;
 					}else {
-						info("Invalid input. Pick a digit in the range of options");
+						info("\n\t>>Invalid input. Pick a digit in the range of options");
 					}
 				}
 				if(promptForOptionCounter) {	//Retrying VIN option
@@ -231,15 +231,15 @@ public class Customer {
 				String carName = cars.get(offerChoice).getName();
 				String carModel = cars.get(offerChoice).getModel();
 				DecimalFormat dec = new DecimalFormat("#0.00");
-				info("You owe: " + dec.format(remaining) + " on the " + carName + " " + carModel);
+				info("\n\t>>You owe: " + dec.format(remaining) + " on the " + carName + " " + carModel);
 			}catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 				stay = false;
 				error(e);
 			}catch(NumberFormatException e){
-				e.printStackTrace();
+				//e.printStackTrace();
 				error(e);
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type\n");
 				stay = false;
 			}
 			catch(Exception e) {
@@ -257,7 +257,7 @@ public class Customer {
 		boolean stay = true;
 		do {
 			try {
-				info("\tWelcome to Customer Menu "+ this.getUserName());
+				info("\tWelcome to the Customer Menu, "+ this.getUserName());
 				info("\t>>Enter '1' View Cars");
 				info("\t>>Enter '2' Make An Offer!");
 				info("\t>>Enter '3' View Owned Cars!");
@@ -289,12 +289,12 @@ public class Customer {
 					break;
 				}
 			}catch(InputMismatchException e) {
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type");
 				stay = false;
 				error(e);
 			}catch(NumberFormatException e){
 				error(e);
-				info("Try Again. Please enter valid the valid data type\n");
+				info("\n\t>>Try Again. Please enter valid the valid data type");
 				stay = false;
 			}
 			catch(Exception e) {
